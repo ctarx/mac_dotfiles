@@ -34,6 +34,7 @@ brew=(
   "zsh"
   "zsh-completions"
   "fasd"
+  "lsd"
   "ranger"
   "pcre2"
   "neovim"
