@@ -14,6 +14,7 @@ $ ./install.sh
 - zsh
 - zsh-completions
 - fasd
+- lsd
 - ranger
 - pcre2
 - neovim (I use a [vim-plug](https://github.com/junegunn/vim-plug) for plugins instead of git submodules)
