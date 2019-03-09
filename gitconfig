@@ -1,0 +1,30 @@
+[user]
+	# These values are set in ~./gitconfig_local
+
+[include]
+  path = ~/.gitconfig_local
+
+[alias]
+  co = checkout
+	st = status
+	ci = commit
+	br = branch
+	df = diff
+	dfs = diff --staged
+	logg = log --graph --decorate --oneline --abbrev-commit --all
+[apply]
+	whitespace = nowarn
+[color]
+	ui = auto
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+[core]
+	autocrlf = false
+	safecrlf = true
+	editor = vim
+	exludesfile = /Users/ctarx/.gitignore
+[credential]
+	helper = osxkeychain
+[push]
+	default = matching

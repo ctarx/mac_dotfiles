@@ -1,0 +1,43 @@
+#!/bin/sh
+
+# UTILITY
+
+alias less='less -R'
+alias grep='grep --color=auto'
+alias ..='cd ../'
+
+alias ls='lsd'
+alias oo='open .' # open current directory in Finder'
+alias brew-update='brew update && brew upgrade && brew cleanup && brew doctor'
+
+# Google Chrome
+alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
+
+# Kill all the tabs in Chrome to free up memory
+# [C] explained: http://www.commandlinefu.com/commands/view/402/exclude-grep-from-your-grepped-output-of-ps-alias-included-in-description
+alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"
+
+
+# Shortcuts
+alias dl='cd ~/Downloads'
+alias dev='cd ~/Projects'
+
+# GIT
+alias gd='git diff'
+alias gco='git checkout'
+alias gs='git status'
+alias gl='git pull'
+alias gp='git push'
+alias gpp='git pull; git push'
+alias gwc='git whatchanged -p --abbrev-commit --pretty=medium'
+
+# Use neovim for vim if present.
+command -v nvim >/dev/null && alias vim="nvim" vimdiff="nvim -d"
+alias nvim-update="nvim +PlugUpgrade +PlugInstall +PlugUpdate +qa"
+
+#  Recursively delete `.DS_Store` files
+alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
+
+#  Show/hide hidden files in Finder
+alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
+alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
