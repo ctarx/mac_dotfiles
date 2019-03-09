@@ -1,0 +1,51 @@
+{
+  "workbench.colorTheme": "Gruvbox Dark (Hard)",
+  "workbench.iconTheme": "vscode-icons",
+
+  // Editor
+  "editor.fontFamily": "Operator Mono, Envy Code R for Powerline, Menlo, monospace",
+  "editor.fontSize": 14,
+  "editor.lineHeight": 0,
+  "editor.letterSpacing": 0.5,
+  "files.trimTrailingWhitespace": true,
+  "editor.fontWeight": "400",
+  "editor.cursorBlinking": "expand",
+  "editor.minimap.enabled": false,
+  "editor.wordWrap": "on",
+  "editor.snippetSuggestions": "top",
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "telemetry.enableTelemetry": false,
+  "telemetry.enableCrashReporter": false,
+  "window.zoomLevel": 0,
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.showSuggestionsAsSnippets": true,
+  "explorer.confirmDragAndDrop": false,
+  "html.format.unformatted": "wbr, a, span",
+  "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": true,
+
+  // Terminal
+  "terminal.integrated.fontFamily": "RobotoMono Nerd Font",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "underline",
+
+  // Live Server
+  "liveServer.settings.donotShowInfoMsg": true,
+
+  //ESLint
+  "eslint.enable": false,
+
+  // Live Sass
+  "liveSassCompile.settings.formats": [{
+    "format": "compressed",
+    "extensionName": ".css",
+    "savePath": "~/../css/"
+  }],
+  "liveSassCompile.settings.autoprefix": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "explorer.confirmDelete": false,
+  "vsicons.dontShowNewVersionMessage": true
+}

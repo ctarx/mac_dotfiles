@@ -1,8 +1,16 @@
 #!/bin/sh
 
-source colors.sh
+source functions.sh
 
 DOTFILES="$HOME/.dotfiles"
+
+# check OS #####
+if is_os "darwin"; then
+  msg_checking "You are on a macOS"
+else
+  msg_alert "You are not on a macOS"
+  exit 1
+fi
 
 # clone repo #####
 if [[ -d $DOTFILES ]]; then

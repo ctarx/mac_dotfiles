@@ -10,17 +10,44 @@ alias ls='lsd'
 alias oo='open .' # open current directory in Finder'
 alias brew-update='brew update && brew upgrade && brew cleanup && brew doctor'
 
-# Google Chrome
-alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
+# Use neovim for vim if present.
+command -v nvim >/dev/null && alias vim="nvim" vimdiff="nvim -d"
+alias nvim-update="nvim +PlugUpgrade +PlugInstall +PlugUpdate +qa" # nvim update plugins
 
-# Kill all the tabs in Chrome to free up memory
-# [C] explained: http://www.commandlinefu.com/commands/view/402/exclude-grep-from-your-grepped-output-of-ps-alias-included-in-description
-alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"
+# Get macOS Software Updates, and update installed Homebrew, npm, and their installed packages
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm install npm -g; npm update -g'
 
+# IP addresses
+alias ip='dig +short myip.opendns.com @resolver1.opendns.com' # Public IP address
+alias localip="ipconfig getifaddr en0"  # Local IP address
+
+# extract:  Extract most know archives with one command
+# ---------------------------------------------------------
+extract () {
+  if [ -f $1 ] ; then
+    case $1 in
+      *.tar.bz2)   tar xjf $1 -C extracted    ;;
+      *.tar.gz)    tar xzf $1 -C extracted   ;;
+      *.bz2)       bunzip2 $1     ;;
+      *.rar)       unrar e $1     ;;
+      *.gz)        gunzip $1      ;;
+      *.tar)       tar xf $1 -C extracted      ;;
+      *.tbz2)      tar xjf $1 -C extracted     ;;
+      *.tgz)       tar xzf $1 -C extracted     ;;
+      *.zip)       unzip $1 -d extracted      ;;
+      *.Z)         uncompress $1  ;;
+      *.7z)        7z x $1        ;;
+      *)     echo "'$1' cannot be extracted via extract()" ;;
+      esac
+    else
+      echo "'$1' is not a valid file"
+    fi
+}
 
 # Shortcuts
 alias dl='cd ~/Downloads'
 alias dev='cd ~/Projects'
+alias dt='cd ~/.dotfiles'
 
 # GIT
 alias gd='git diff'
@@ -31,13 +58,28 @@ alias gp='git push'
 alias gpp='git pull; git push'
 alias gwc='git whatchanged -p --abbrev-commit --pretty=medium'
 
-# Use neovim for vim if present.
-command -v nvim >/dev/null && alias vim="nvim" vimdiff="nvim -d"
-alias nvim-update="nvim +PlugUpgrade +PlugInstall +PlugUpdate +qa"
+# Google Chrome
+alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
+
+# Kill all the tabs in Chrome to free up memory
+# [C] explained: http://www.commandlinefu.com/commands/view/402/exclude-grep-from-your-grepped-output-of-ps-alias-included-in-description
+alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"
 
 #  Recursively delete `.DS_Store` files
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 
+# Clean up LaunchServices to remove duplicates in the “Open With” menu
+alias lscleanup="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"
+
 #  Show/hide hidden files in Finder
 alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
 alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
+
+# Lock the screen (when going AFK)
+alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+
+# Reload the shell (i.e. invoke as a login shell)
+alias reload="exec ${SHELL} -l"
+
+# Print each PATH entry on a separate line
+alias path='echo -e ${PATH//:/\\n}'
