@@ -216,6 +216,6 @@ done
 # ~/.hushlogin suppresses the 'last login' message
   touch ~/.hushlogin
 
-print 'All done'
-msg 'Start using your machine'
+print "All done!"
+msg "Start using your machine."
 zsh
