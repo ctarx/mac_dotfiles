@@ -161,7 +161,8 @@ done
 
   ln -s $DOTFILES/gitignore ~/.gitignore
   msg_checking ".gitignore"
-  git config --global core.excludesfile ~/.gitignore
+  git config --global core.excludesFile '~/.gitignore'
+
 
 
 # tmux #####
