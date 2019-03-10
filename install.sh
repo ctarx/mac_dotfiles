@@ -4,35 +4,37 @@ source functions.sh
 
 DOTFILES="$HOME/.dotfiles"
 
-# check OS #####
-if is_os "darwin"; then
-  msg_checking "You are on a macOS"
-else
-  msg_alert "You are not on a macOS"
-  exit 1
-fi
+# checking OS #####
+print 'Checking OS'
+  if is_os "darwin"; then
+    msg_checking "You are on a macOS"
+  else
+    msg_alert "You are not on a macOS"
+    exit 1
+  fi
+
 
 # clone repo #####
-if [[ -d $DOTFILES ]]; then
+  if [[ -d $DOTFILES ]]; then
     print 'Checking dotfiles directory'
-else
+  else
     print 'Cloning dotfiles'
-    git clone https://github.com/ctarx/dotfiles.git $DOTFILES
-fi
+    git clone --recursive https://github.com/ctarx/dotfiles.git $DOTFILES
+  fi
 
 cd $DOTFILES
 
 # Brew #####
 msg_install "Setting up Homebrew"
-if test ! $(which brew); then
-  msg_install "Installing homebrew"
+  if test ! $(which brew); then
+    msg_install "Installing homebrew"
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  msg_ok 'Homebrew'
-else
-  msg_alert "Homebrew already instaled"
-  msg_update "Updating Homebrew"
-  brew update
-fi
+    msg_ok 'Homebrew'
+  else
+    msg_alert "Homebrew already instaled"
+    msg_update "Updating Homebrew"
+    brew update
+  fi
 
 
 # Brew apps #####
@@ -76,127 +78,143 @@ done
 
 
 # .bash_profile #####
-if [ -f "$HOME/.bash_profile" ]; then
+  if [ -f "$HOME/.bash_profile" ]; then
     msg_update ".bash_profile"
     rm -rf ~/.bash_profile
-else
+  else
     msg_install ".bash_profile"
-fi
+  fi
 
-ln -s $DOTFILES/bash_profile ~/.bash_profile
-msg_checking ".bash_profile"
+  ln -s $DOTFILES/bash_profile ~/.bash_profile
+  msg_checking ".bash_profile"
 
 
 # .bashrc #####
-if [ -f "$HOME/.bashrc" ]; then
+  if [ -f "$HOME/.bashrc" ]; then
     rm -rf ~/.bashrc
-else
+  else
     msg_install ".bashrc"
-fi
+  fi
 
-ln -s $DOTFILES/bashrc ~/.bashrc
-msg_checking ".bashrc"
+  ln -s $DOTFILES/bashrc ~/.bashrc
+  msg_checking ".bashrc"
 
 
 # aliasrc #####
-if [ -f "$HOME/.config/aliasrc" ]; then
+  if [ -f "$HOME/.config/aliasrc" ]; then
     msg_update "aliasrc"
     rm -rf ~/.config/aliasrc
-else
+  else
     msg_install ".aliases"
-fi
-cd ..
-mkdir -p ~/.config
-ln -s $DOTFILES/aliasrc ~/.config/aliasrc
-msg_checking "aliasrc"
+  fi
+
+  ln -s $DOTFILES/aliasrc ~/.config/aliasrc
+  msg_checking "aliasrc"
 
 
 # vim #####
-if [ -d "$HOME/.config/nvim" ]; then
+  if [ -d "$HOME/.config/nvim" ]; then
     msg_update "nvim"
     rm -rf ~/.config/nvim
-else
+    rm -rf ~/.vim
+    rm -rf ~/.vimrc
+  else
     msg_install "nvim"
-fi
-mkdir -p ~./config
-ln -s $DOTFILES/nvim ~/.config/nvim
-ln -sf ~/.dotfiles/nvim ~/.vim
-ln -sf ~/.dotfiles/nvim/init.vim ~/.vimrc
-msg_checking "nvim"
+  fi
+
+  ln -s $DOTFILES/nvim ~/.config/nvim
+  ln -sf ~/.dotfiles/nvim ~/.vim
+  ln -sf ~/.dotfiles/nvim/init.vim ~/.vimrc
+  msg_checking "nvim"
+
+
+# vscode #####
+  if [ -f "~/Library/Application\ Support/Code/User/settings.json" ]; then
+    msg_update "vscode"
+    rm -rf ~/Library/Application\ Support/Code/User/settings.json
+  else
+    msg_install "vscode"
+  fi
+  ln -sf $DOTFILES/settings.json ~/Library/Application\ Support/Code/User/settings.json
+  msg_checking "vscode"
 
 
 # .gitconfig #####
-if [ -f "$HOME/.giconfig" ]; then
+  if [ -f "$HOME/.giconfig" ]; then
     msg_update ".gitconfig"
     rm -rf ~/.gitconfig
-else
+  else
     msg_install ".gitconfig"
-fi
+  fi
 
-ln -s $DOTFILES/gitconfig ~/.gitconfig
-msg_checking ".gitconfig"
+  ln -s $DOTFILES/gitconfig ~/.gitconfig
+  msg_checking ".gitconfig"
 
 
 # .gitignore #####
-if [ -f "$HOME/.gitignore" ]; then
+  if [ -f "$HOME/.gitignore" ]; then
     msg_update ".gitignore"
     rm -rf ~/.gitignore
-else
+  else
     msg_install ".gitignore"
-fi
+  fi
 
-ln -s $DOTFILES/gitignore ~/.gitignore
-msg_checking ".gitignore"
-git config --global core.excludesfile ~/.gitignore
+  ln -s $DOTFILES/gitignore ~/.gitignore
+  msg_checking ".gitignore"
+  git config --global core.excludesfile ~/.gitignore
 
 
 # tmux #####
-if [ -f "$HOME/.tmux.conf" ]; then
+  if [ -f "$HOME/.tmux.conf" ]; then
     msg_update ".tmux.conf"
     rm -rf ~/.tmux.conf
-else
+  else
     msg_install ".tmux.conf"
-fi
+  fi
 
-ln -s $DOTFILES/tmux.conf ~/.tmux.conf
-msg_checking ".tmux.conf"
+  ln -s $DOTFILES/tmux.conf ~/.tmux.conf
+  msg_checking ".tmux.conf"
 
 
 # ranger #####
-if [ -d "$HOME/.config/ranger" ]; then
+  if [ -d "$HOME/.config/ranger" ]; then
     msg_update ".ranger"
     rm -rf ~/.config/ranger
-else
+  else
     msg_install ".ranger"
-fi
+  fi
 
-ln -s $DOTFILES/ranger ~/.config/ranger
-msg_checking ".ranger"
+  ln -s $DOTFILES/ranger ~/.config/ranger
+  msg_checking ".ranger"
 
 
 # zsh #####
-if [ -f "$HOME/.zshrc" ]; then
+  if [ -f "$HOME/.zshrc" ]; then
     msg_update ".zshrc"
     rm -rf ~/.zshrc
-else
+  else
     msg_install ".zshrc"
-fi
+  fi
 
-ln -s $DOTFILES/zshrc ~/.zshrc
-msg_checking ".zshrc"
+  ln -s $DOTFILES/zshrc ~/.zshrc
+  msg_checking ".zshrc"
+
 
 # slimzsh
-if [[ -d $HOME/.slimzsh ]]; then
+  if [[ -d $HOME/.slimzsh ]]; then
     print 'Checking slimzh directory'
-else
+  else
     print 'Cloning slimzsh'
     git clone --recursive https://github.com/changs/slimzsh.git ~/.slimzsh
-    ln -s $DOTFILES/aliases.zsh.local ~/.slimzh/aliases.zsh.local
-fi
+  fi
+
+  rm -rf ~/.slimzsh/aliases.zsh.local
+  touch ~/.slimzsh/aliases.zsh.local
+  echo '[ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"' >> ~/.slimzsh/aliases.zsh.local
+
 
 # ~/.hushlogin suppresses the 'last login' message
-rm -rf ~/.hushlogin
-touch ~/.hushlogin
+  touch ~/.hushlogin
 
 print 'All done'
 msg 'Start using your machine'
