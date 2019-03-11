@@ -37,36 +37,36 @@ call plug#end()
   set hlsearch                    " Highlight found searches
   set mouse=a
   set cursorline                  " Highlit cursor line
-	set number relativenumber       " Show relative and actual line number
+  set number relativenumber       " Show relative and actual line number
 
 " Softtaabs, 2 spaces
-	set tabstop=2
-	set shiftwidth=2
+  set tabstop=2
+  set shiftwidth=2
   set shiftround
-	set expandtab
+  set expandtab
 
 " Enable autocompletion:
-	set wildmode=longest,list,full
+  set wildmode=longest,list,full
 
 " Splits open at the bottom and right, which is non-retarded, unlike vim defaults.
-	set splitbelow splitright
+  set splitbelow splitright
 
 " Nerd tree
   map <leader>q :NERDTreeToggle<CR>
   let NERDTreeShowHidden=1
 
 " devicons
-let g:webdevicons_enable_nerdtree = 1             " adding to NERDTree
-let g:webdevicons_enable_airline_statusline = 1   " adding to vim-airline's statusline
+  let g:webdevicons_enable_nerdtree = 1             " adding to NERDTree
+  let g:webdevicons_enable_airline_statusline = 1   " adding to vim-airline's statusline
 
 " Shortcutting split navigation, saving a keypress:
-	map <C-h> <C-w>h
-	map <C-j> <C-w>j
-	map <C-k> <C-w>k
-	map <C-l> <C-w>l
+  map <C-h> <C-w>h
+  map <C-j> <C-w>j
+  map <C-k> <C-w>k
+  map <C-l> <C-w>l
 
 " Automatically deletes all trailing whitespace on save.
-	autocmd BufWritePre * %s/\s\+$//e
+  autocmd BufWritePre * %s/\s\+$//e
 
 " Enable Emmet just for html/css
   let g:user_emmet_install_global = 0
