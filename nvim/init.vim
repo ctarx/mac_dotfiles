@@ -26,7 +26,7 @@ call plug#end()
   filetype plugin indent on
   set background=dark             " Use dark background
   colorscheme gruvbox             " gruvbox colorscheme
-  set lines=60 columns=100        " vim initial window size
+""set lines=50 columns=100        " vim initial window size
   set clipboard=unnamed           " Clipboard integration
   set laststatus=2                " Always show status line
   set encoding=utf-8              " Set default encoding to UTF-8
@@ -68,10 +68,15 @@ call plug#end()
 " Automatically deletes all trailing whitespace on save.
   autocmd BufWritePre * %s/\s\+$//e
 
+" Disables automatic commenting on newline:
+	autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+" Spell-check set to F6:
+  map <F6> :setlocal spell! spelllang=en_gb<CR>
+
 " Enable Emmet just for html/css
   let g:user_emmet_install_global = 0
   autocmd FileType html,css EmmetInstall
 
 " Custom mappings
   map \ <leader>q
-

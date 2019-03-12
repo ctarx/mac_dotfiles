@@ -179,14 +179,26 @@ done
 
 # ranger #####
   if [ -d "$HOME/.config/ranger" ]; then
-    msg_update ".ranger"
+    msg_update "ranger"
     rm -rf ~/.config/ranger
   else
-    msg_install ".ranger"
+    msg_install "ranger"
   fi
 
   ln -s $DOTFILES/ranger ~/.config/ranger
-  msg_checking ".ranger"
+  msg_checking "ranger"
+
+
+# vifm #####
+  if [ -d "$HOME/.config/vifm" ]; then
+    msg_update "vifm"
+    rm -rf ~/.config/vifm
+  else
+    msg_install "vifm"
+  fi
+
+  ln -s $DOTFILES/vifm ~/.config/vifm
+  msg_checking "vifm"
 
 
 # zsh #####
