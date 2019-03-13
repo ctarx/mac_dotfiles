@@ -23,7 +23,7 @@
 	autocrlf = false
 	safecrlf = true
 	editor = vim
-	excludesFile = ~/.gitignore
+	excludesfile = /Users/ctarx/.gitignore
 [credential]
 	helper = osxkeychain
 [push]

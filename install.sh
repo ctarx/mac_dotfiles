@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 source functions.sh
 
@@ -19,19 +19,19 @@ print 'Checking OS'
     print 'Checking dotfiles directory'
   else
     print 'Cloning dotfiles'
-    git clone --recursive https://github.com/ctarx/dotfiles.git $DOTFILES
+    git clone --recursive https://github.com/ctarx/dotfiles.git "$DOTFILES"
   fi
 
-cd $DOTFILES
+cd "$DOTFILES" || exit
 
 # Brew #####
 msg_install "Setting up Homebrew"
-  if test ! $(which brew); then
-    msg_install "Installing homebrew"
+  if test ! "$(command -v which brew)"; then
+    msg_install "Installing Homebrew"
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     msg_ok 'Homebrew'
   else
-    msg_alert "Homebrew already instaled"
+    msg_alert "Homebrew already installed"
     msg_update "Updating Homebrew"
     brew update
   fi
@@ -39,23 +39,18 @@ msg_install "Setting up Homebrew"
 
 # Brew apps #####
 msg_install "Installing apps with brew"
-brew=(
-  "git"
-  "zsh"
-  "zsh-completions"
-  "fasd"
-  "lsd"
-  "ranger"
-  "pcre2"
-  "neovim"
-  "node"
-)
+BREW_PACKAGES=( git fasd lsd vifm pcre2 neovim node zsh zsh-completions bash bash-completion )
 
-for app in "${brew[@]}"; do
-  msg_install "Installing $app"
-  brew install $app
+for app in "${BREW_PACKAGES[@]}"; do
+  msg_checking "Checking package $app"
+  if test ! "$(brew list | grep "$app")"; then
+    msg_install "$app"
+    brew install "$app"
+  else
   msg_ok "$app"
+  fi
 done
+print "Homebrew packages installed"
 
 
 #  Brew Cask #####
@@ -72,7 +67,7 @@ cask=(
 
 for app in "${cask[@]}"; do
   msg_install "Installing $app"
-  brew cask install $app
+  brew cask install "$app"
   msg_ok "$app"
 done
 
@@ -85,7 +80,7 @@ done
     msg_install ".bash_profile"
   fi
 
-  ln -s $DOTFILES/bash_profile ~/.bash_profile
+  ln -s "$DOTFILES/bash_profile" ~/.bash_profile
   msg_checking ".bash_profile"
 
 
@@ -96,7 +91,7 @@ done
     msg_install ".bashrc"
   fi
 
-  ln -s $DOTFILES/bashrc ~/.bashrc
+  ln -s "$DOTFILES/bashrc" ~/.bashrc
   msg_checking ".bashrc"
 
 
@@ -108,7 +103,7 @@ done
     msg_install ".aliases"
   fi
 
-  ln -s $DOTFILES/aliasrc ~/.config/aliasrc
+  ln -s "$DOTFILES/aliasrc" ~/.config/aliasrc
   msg_checking "aliasrc"
 
 
@@ -122,20 +117,20 @@ done
     msg_install "nvim"
   fi
 
-  ln -s $DOTFILES/nvim ~/.config/nvim
+  ln -s "$DOTFILES/nvim" ~/.config/nvim
   ln -sf ~/.dotfiles/nvim ~/.vim
   ln -sf ~/.dotfiles/nvim/init.vim ~/.vimrc
   msg_checking "nvim"
 
 
 # vscode #####
-  if [ -f "~/Library/Application\ Support/Code/User/settings.json" ]; then
+  if [ -f "$HOME/Library/Application\ Support/Code/User/settings.json" ]; then
     msg_update "vscode"
     rm -rf ~/Library/Application\ Support/Code/User/settings.json
   else
     msg_install "vscode"
   fi
-  ln -sf $DOTFILES/settings.json ~/Library/Application\ Support/Code/User/settings.json
+  ln -sf "$DOTFILES/settings.json" ~/Library/Application\ Support/Code/User/settings.json
   msg_checking "vscode"
 
 
@@ -147,7 +142,7 @@ done
     msg_install ".gitconfig"
   fi
 
-  ln -s $DOTFILES/gitconfig ~/.gitconfig
+  ln -s "$DOTFILES/gitconfig" ~/.gitconfig
   msg_checking ".gitconfig"
 
 
@@ -159,9 +154,9 @@ done
     msg_install ".gitignore"
   fi
 
-  ln -s $DOTFILES/gitignore ~/.gitignore
+  ln -s "$DOTFILES/gitignore" ~/.gitignore
   msg_checking ".gitignore"
-  git config --global core.excludesFile '~/.gitignore'
+  git config --global core.excludesFile "$HOME/.gitignore"
 
 
 
@@ -173,7 +168,7 @@ done
     msg_install ".tmux.conf"
   fi
 
-  ln -s $DOTFILES/tmux.conf ~/.tmux.conf
+  ln -s "$DOTFILES/tmux.conf" ~/.tmux.conf
   msg_checking ".tmux.conf"
 
 
@@ -185,7 +180,7 @@ done
     msg_install "ranger"
   fi
 
-  ln -s $DOTFILES/ranger ~/.config/ranger
+  ln -s "$DOTFILES/ranger" ~/.config/ranger
   msg_checking "ranger"
 
 
@@ -197,7 +192,7 @@ done
     msg_install "vifm"
   fi
 
-  ln -s $DOTFILES/vifm ~/.config/vifm
+  ln -s "$DOTFILES/vifm" ~/.config/vifm
   msg_checking "vifm"
 
 
@@ -209,7 +204,7 @@ done
     msg_install ".zshrc"
   fi
 
-  ln -s $DOTFILES/zshrc ~/.zshrc
+  ln -s "$DOTFILES/zshrc" ~/.zshrc
   msg_checking ".zshrc"
 
 
