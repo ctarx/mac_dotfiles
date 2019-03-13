@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# Error handling
+trap 'ret=$?; test $ret -ne 0 && printf "${red}Setup failed${reset}\n" >&2; exit $ret' EXIT
+set -e
+
 # check OS #####
 is_os() {
 if [[ "${OSTYPE}" == $1* ]]; then
@@ -9,16 +13,15 @@ return 1
 }
 
 # COLORS #####
-green=$(tput setaf 106)   # Green
-yellow=$(tput setaf 172)  # Yellow
-#orange=$(tput setaf 166)  # Orange
-red=$(tput setaf 124)     # Red
+green=$(tput setaf 106)    # Green
+yellow=$(tput setaf 172)   # Yellow
+orange=$(tput setaf 166)   # Orange
+red=$(tput setaf 124)      # Red
 blue=$(tput setaf 66)      # Blue
 #purple=$(tput setaf 132)  # Purple
 #grey=$(tput setaf 246)    # Grey
-
-bold=$(tput bold)         # Bold text
-reset=$(tput sgr0)        # Text reset
+bold=$(tput bold)          # Bold text
+reset=$(tput sgr0)         # Text reset
 
 
 print() {

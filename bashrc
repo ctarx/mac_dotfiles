@@ -13,7 +13,7 @@ SHELL_SESSION_HISTORY=0
 export PATH="/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/local/opt:$PATH"
 export EDITOR="nvim"
 
-##### Bash prompt
+##### Bash prompt #####
 
 # colors
 green=$(tput setaf 106)   # Green
@@ -62,9 +62,15 @@ function parse_git_dirty {
 	fi
 }
 
-export PS1="${blue}●${yellow}\`parse_git_branch\` ${bold}${grey}\W ${reset}\n${bold}${purple}❯ ${reset}"
+PS1="${blue}●"                        # Separator
+PS1+="${yellow}\`parse_git_branch\`"  # GIT repository
+PS1+=" ${bold}${blue}\w"              # working directory
+PS1+="${reset}\n"                     # reset and new line
+PS1+="${bold}${purple}❯ ${reset}"     # prompt sign and reset
 
-##### SHELL OPTIONS
+export PS1;
+
+##### SHELL OPTIONS #####
 
 # Make bash check its window size after a process completes
 shopt -s checkwinsize
@@ -79,6 +85,18 @@ shopt -s autocd
 
 #Bash completion
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+
+#brew completions in bash
+if type brew &>/dev/null; then
+  for COMPLETION in $(brew --prefix)/etc/bash_completion.d/*
+  do
+    [[ -f $COMPLETION ]] && source "$COMPLETION"
+  done
+  if [[ -f $(brew --prefix)/etc/profile.d/bash_completion.sh ]];
+  then
+    source "$(brew --prefix)/etc/profile.d/bash_completion.sh"
+  fi
+fi
 
 # Load aliases
 [ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"

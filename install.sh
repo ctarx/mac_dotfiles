@@ -4,6 +4,23 @@ source functions.sh
 
 DOTFILES="$HOME/.dotfiles"
 
+printf "
+${yellow}
+ _____   _____    __    ______  ____  ____    ______  ______
+|     \ /     \ _|  |_ |   ___||    ||    |  |   ___||   ___|
+|      \|     ||_    _||   ___||    ||    |_ |   ___| `-.`-.
+|______/\_____/  |__|  |___|   |____||______||______||______|
+${green}\n
+---------------------------------------
+        ==> Setup for macOS <==
+
+  ${yellow}● ${green}personal dotfiles
+  ${yellow}● ${green}and base configuration files\n
+   https://github.com/ctarx/dotfiles
+---------------------------------------
+${reset}\n
+"
+
 # checking OS #####
 print 'Checking OS'
   if is_os "darwin"; then
@@ -39,7 +56,7 @@ msg_install "Setting up Homebrew"
 
 # Brew apps #####
 msg_install "Installing apps with brew"
-BREW_PACKAGES=( git fasd lsd vifm pcre2 neovim node zsh zsh-completions bash bash-completion )
+BREW_PACKAGES=( git fasd lsd vifm pcre2 neovim node zsh zsh-completions bash )
 
 for app in "${BREW_PACKAGES[@]}"; do
   msg_checking "Checking package $app"
@@ -55,21 +72,18 @@ print "Homebrew packages installed"
 
 #  Brew Cask #####
 msg_install "Installing apps with brew cask"
-brew cask
-
-cask=(
-  "google-chrome"
-  "firefox"
-  "visual-studio-code"
-  "iina"
-  "cakebrew"
-)
+cask=( google-chrome firefox visual-studio-code iina cakebrew )
 
 for app in "${cask[@]}"; do
+  msg_checking "Checking application $app"
+  if test ! "$(brew cask list | grep "$app")"; then
   msg_install "Installing $app"
   brew cask install "$app"
+  else
   msg_ok "$app"
+  fi
 done
+print "Homebrew cask applications installed"
 
 
 # .bash_profile #####
@@ -225,5 +239,4 @@ done
   touch ~/.hushlogin
 
 print "All done!"
-msg "Start using your machine."
-zsh
+msg_info "Start using your machine."
