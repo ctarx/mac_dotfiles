@@ -62,7 +62,7 @@ function parse_git_dirty {
 	fi
 }
 
-export PS1="${blue}●${yellow}\`parse_git_branch\` ${bold}${grey}\W ${reset}\n${bold}${purple}>> ${reset}"
+export PS1="${blue}●${yellow}\`parse_git_branch\` ${bold}${grey}\W ${reset}\n${bold}${purple}❯ ${reset}"
 
 ##### SHELL OPTIONS
 
