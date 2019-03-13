@@ -42,7 +42,7 @@ $ ./install.sh
 - Set zsh as login shell (<b>shell chsh -s $(which zsh)</b>)
 
 #### Inspiration
-Install script inspired by [Willian Justen](https://github.com/willianjusten/dotfiles)
+Install script inspired by github users
 
 #### Contact
 Created by [@ctarx](https://twitter.com/ctarx) - feel free to contact me!

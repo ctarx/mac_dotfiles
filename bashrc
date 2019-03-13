@@ -72,12 +72,6 @@ shopt -s checkwinsize
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
 
-# Append to the Bash history file, rather than overwriting it
-shopt -s histappend
-
-# Save all lines of a multiple-line command in the same history entry.
-shopt -s cmdhist
-
 # Allows to cd into a dir by just typing the dir name
 shopt -s autocd
 
