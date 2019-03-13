@@ -43,7 +43,7 @@ $ ./install.sh
 
 #### Inspiration
 Install script and prompt inspired by github users:
-[Willian Justen](https://github.com/willianjusten/dotfiles) [tiaanduplessis](https://github.com/tiaanduplessis) [elithrar](https://github.com/elithrar)
+[Willian Justen](https://github.com/willianjusten/dotfiles) [tiaanduplessis](https://github.com/tiaanduplessis/prompt) [elithrar](https://github.com/elithrar/dotfiles)
 
 #### Contact
 Created by [@ctarx](https://twitter.com/ctarx) - feel free to contact me!
