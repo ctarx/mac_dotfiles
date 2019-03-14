@@ -4,22 +4,15 @@ source functions.sh
 
 DOTFILES="$HOME/.dotfiles"
 
-printf "
-${yellow}
- _____   _____    __    ______  ____  ____    ______  ______
-|     \ /     \ _|  |_ |   ___||    ||    |  |   ___||   ___|
-|      \|     ||_    _||   ___||    ||    |_ |   ___| `-.`-.
-|______/\_____/  |__|  |___|   |____||______||______||______|
-${green}\n
----------------------------------------
-        ==> Setup for macOS <==
+printf "${green}
+-------------------------------------
+  ==> Setup for macOS <==
 
-  ${yellow}● ${green}personal dotfiles
-  ${yellow}● ${green}and base configuration files\n
-   https://github.com/ctarx/dotfiles
----------------------------------------
-${reset}\n
-"
+${yellow}● ${green}personal dotfiles
+${yellow}● ${green}and base configuration files\n
+${yellow}https://github.com/ctarx/dotfiles${reset}
+${green}-------------------------------------
+${reset}"
 
 # checking OS #####
 print 'Checking OS'
