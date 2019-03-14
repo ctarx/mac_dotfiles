@@ -42,7 +42,7 @@ print 'Checking OS'
 cd "$DOTFILES" || exit
 
 # Brew #####
-msg_install "Setting up Homebrew"
+print "Setting up Homebrew"
   if test ! "$(command -v which brew)"; then
     msg_install "Installing Homebrew"
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -55,7 +55,7 @@ msg_install "Setting up Homebrew"
 
 
 # Brew apps #####
-msg_install "Installing apps with brew"
+print "Installing apps with brew"
 BREW_PACKAGES=( git fasd lsd vifm pcre2 neovim node zsh zsh-completions bash )
 
 for app in "${BREW_PACKAGES[@]}"; do
@@ -71,7 +71,7 @@ print "Homebrew packages installed"
 
 
 #  Brew Cask #####
-msg_install "Installing apps with brew cask"
+print "Installing apps with brew cask"
 cask=( google-chrome firefox visual-studio-code iina cakebrew )
 
 for app in "${cask[@]}"; do
@@ -86,6 +86,7 @@ done
 print "Homebrew cask applications installed"
 
 
+print 'Checking dotfiles'
 # .bash_profile #####
   if [ -f "$HOME/.bash_profile" ]; then
     msg_update ".bash_profile"
@@ -100,6 +101,7 @@ print "Homebrew cask applications installed"
 
 # .bashrc #####
   if [ -f "$HOME/.bashrc" ]; then
+    msg_update ".bashrc"
     rm -rf ~/.bashrc
   else
     msg_install ".bashrc"
@@ -139,17 +141,17 @@ print "Homebrew cask applications installed"
 
 # vscode #####
   if [ -f "$HOME/Library/Application\ Support/Code/User/settings.json" ]; then
-    msg_update "vscode"
+    msg_update "vscode settings"
     rm -rf ~/Library/Application\ Support/Code/User/settings.json
   else
-    msg_install "vscode"
+    msg_install "vscode setings"
   fi
   ln -sf "$DOTFILES/settings.json" ~/Library/Application\ Support/Code/User/settings.json
-  msg_checking "vscode"
+  msg_checking "vscode settings"
 
 
 # .gitconfig #####
-  if [ -f "$HOME/.giconfig" ]; then
+  if [ -f "$HOME/.gitconfig" ]; then
     msg_update ".gitconfig"
     rm -rf ~/.gitconfig
   else

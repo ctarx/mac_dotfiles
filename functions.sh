@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-# Error handling
-trap 'ret=$?; test $ret -ne 0 && printf "${red}Setup failed${reset}\n" >&2; exit $ret' EXIT
-set -e
 
 # check OS #####
 is_os() {
