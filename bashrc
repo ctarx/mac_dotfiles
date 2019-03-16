@@ -6,12 +6,17 @@
 #  |_.__/ \__,_|___/_| |_|_|  \___|
 #
 
-# History size matter
-export HISTSIZE=50000
-export HISTFILESIZE=50000
+# HISTORY
+export HISTSIZE=100000          # big big history (default is 500)
+export HISTFILESIZE=$HISTSIZE   # big big history
+# Don't record some commands
+export HISTIGNORE="&:[ ]*:exit:ls:bg:fg:history:clear"
+# Save multi-line commands as one command
+shopt -s cmdhist
+
 
 # PATH
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/local/opt:$PATH"
+export PATH="$HOME/bin:$PATH";
 
 # Editor
 export EDITOR="nvim"
@@ -24,7 +29,7 @@ export CLICOLOR=1
 # colors
 green=$(tput setaf 106)   # Green
 yellow=$(tput setaf 172)  # Yellow
-blue=$(tput setaf 66)      # Blue
+blue=$(tput setaf 66)     # Blue
 purple=$(tput setaf 132)  # Purple
 grey=$(tput setaf 246)    # Grey
 

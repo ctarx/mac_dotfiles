@@ -30,156 +30,6 @@ l2
 r2
 
 # Left window history (oldest to newest):
-d/Users/ctarx/Projects
-	web-sites
-4
-d/Users/ctarx/Projects/web-sites
-	Academy
-1
-d/Users/ctarx/Projects/web-sites/Academy
-	index.html
-8
-d/Users/ctarx/Projects/web-sites
-	Academy
-1
-d/Users/ctarx/Projects
-	web-sites
-4
-d/Users/ctarx
-	Movies
-8
-d/Users/ctarx/Movies
-	..
-0
-d/Users/ctarx
-	Downloads
-4
-d/Users/ctarx/Downloads
-	..
-0
-d/Users/ctarx
-	Downloads
-4
-d/Users/ctarx/Downloads
-	..
-0
-d/Users/ctarx
-	Downloads
-4
-d/Users/ctarx/Downloads
-	..
-0
-d/Users/ctarx
-	Downloads
-4
-d/Users/ctarx/Downloads
-	..
-0
-d/Users/ctarx
-	..
-0
-d/Users
-	ctarx
-3
-d/
-	etc
-10
-d/etc
-	..
-0
-d/
-	etc
-10
-d/etc
-	..
-0
-d/
-	Users
-5
-d/Users
-	ctarx
-3
-d/Users/ctarx
-	.config
-5
-d/Users/ctarx/.config
-	vifm
-8
-d/Users/ctarx/.config/vifm
-	vifmrc
-5
-d/Users/ctarx/.dotfiles
-	..
-0
-d/Users/ctarx
-	.config
-5
-d/Users/ctarx/.config
-	nvim
-6
-d/Users/ctarx/.config/nvim
-	..
-0
-d/Users/ctarx/.config
-	vifm
-8
-d/Users/ctarx/.config/vifm
-	colors
-1
-d/Users/ctarx/.config/vifm/colors
-	..
-0
-d/Users/ctarx/.config/vifm
-	colors
-1
-d/Users/ctarx/.config/vifm/colors
-	..
-0
-d/Users/ctarx/.config/vifm
-	..
-0
-d/Users/ctarx/.config
-	..
-0
-d/Users/ctarx
-	.config
-5
-d/Users/ctarx/.config
-	vifm
-8
-d/Users/ctarx/.config/vifm
-	colors
-1
-d/Users/ctarx/.config/vifm/colors
-	..
-0
-d/Users/ctarx/.config/vifm
-	colors
-1
-d/Users/ctarx/.config/vifm/colors
-	..
-0
-d/Users/ctarx/.config/vifm
-	..
-0
-d/Users/ctarx/.config
-	..
-0
-d/Users/ctarx
-	..
-0
-d/Users
-	ctarx
-3
-d/Users/ctarx
-	.mume
-15
-d/Users/ctarx/.mume
-	..
-0
-d/Users/ctarx
-	.mume
-15
 d/Users/ctarx/.mume
 	..
 0
@@ -328,8 +178,158 @@ d/Users/ctarx/Pictures
 	..
 0
 d/Users/ctarx
-	.cache
-4
+	..
+0
+d/Users
+	ctarx
+3
+d/Users/ctarx
+	.config
+6
+d/Users/ctarx/.config
+	..
+0
+d/Users/ctarx
+	bin
+38
+d/Users/ctarx/bin
+	..
+0
+d/Users/ctarx
+	bin
+38
+d/Users/ctarx/bin
+	shell-color-scripts
+1
+d/Users/ctarx/bin/shell-color-scripts
+	arch
+5
+d/Users/ctarx/bin
+	shell-color-scripts
+1
+d/Users/ctarx
+	.iStats
+12
+d/Users/ctarx/.iStats
+	..
+0
+d/Users/ctarx
+	.iStats
+12
+d/Users/ctarx/.iStats
+	..
+0
+d/Users/ctarx
+	.local
+12
+d/Users/ctarx/.local
+	share
+1
+d/Users/ctarx/.local/share
+	nvim
+1
+d/Users/ctarx/.local/share/nvim
+	..
+0
+d/Users/ctarx/.local/share
+	ranger
+2
+d/Users/ctarx/.local/share/ranger
+	..
+0
+d/Users/ctarx/.local/share
+	..
+0
+d/Users/ctarx/.local
+	..
+0
+d/Users/ctarx
+	.local
+12
+d/Users/ctarx/.local
+	share
+1
+d/Users/ctarx/.local/share
+	nvim
+1
+d/Users/ctarx/.local/share/nvim
+	shada
+1
+d/Users/ctarx/.local/share/nvim/shada
+	..
+0
+d/Users/ctarx/.local/share/nvim
+	swap
+2
+d/Users/ctarx/.local/share/nvim/swap
+	..
+0
+d/Users/ctarx/.local/share/nvim
+	..
+0
+d/Users/ctarx/.local/share
+	ranger
+2
+d/Users/ctarx/.local/share/ranger
+	..
+0
+d/Users/ctarx/.local/share
+	vifm
+3
+d/Users/ctarx/.local/share/vifm
+	Trash
+1
+d/Users/ctarx/.local/share/vifm/Trash
+	..
+0
+d/Users/ctarx/.local/share/vifm
+	..
+0
+d/Users/ctarx/.local/share
+	ranger
+2
+d/Users/ctarx/.local/share/ranger
+	..
+0
+d/Users/ctarx/.local/share
+	ranger
+2
+d/Users/ctarx/.local
+	share
+1
+d/Users/ctarx
+	.local
+12
+d/Users
+	ctarx
+3
+d/Users/ctarx
+	.node-gyp
+16
+d/Users/ctarx/.node-gyp
+	11.9.0
+1
+d/Users/ctarx/.node-gyp/11.9.0
+	..
+0
+d/Users/ctarx/.node-gyp
+	11.9.0
+1
+d/Users/ctarx
+	.local
+12
+d/Users/ctarx/.local
+	share
+1
+d/Users/ctarx/.local/share
+	vifm
+3
+d/Users/ctarx/.local/share/vifm
+	Trash
+1
+d/Users/ctarx/.local/share/vifm/Trash
+	000_starttf
+19
 d
 
 # Right window history (oldest to newest):
@@ -439,21 +439,73 @@ D/Users/ctarx/Pictures
 	..
 0
 D/Users/ctarx
-	Pictures
-10
+	Documents
+3
+D/Users/ctarx/Documents
+	..
+0
+D/Users/ctarx
+	Projects
+11
+D/Users/ctarx/Projects
+	..
+0
+D/Users/ctarx
+	Projects
+11
+D/Users/ctarx/Projects
+	dotfiles
+1
+D/Users/ctarx/Projects/dotfiles
+	..
+0
+D/Users/ctarx/Projects
+	dotfiles
+1
+D/Users/ctarx
+	Downloads
+4
+D/Users/ctarx/Downloads
+	extracted
+3
+D/Users/ctarx/Downloads/extracted
+	..
+0
+D/Users/ctarx/Downloads
+	..
+0
+D/Users/ctarx
+	..
+0
+D/Users
+	ctarx
+3
+D/Users/ctarx
+	bin
+38
+D/Users/ctarx/bin
+	..
+0
+D/Users/ctarx
+	bin
+13
+D/Users/ctarx/bin
+	..
+0
 D
 
 # Command line history (oldest to newest):
-:Q
 :,C
 :s
 :marks
-:help
 :touch luke.vifm
 :reload
 :mkdir mem
 :cp ~/Destop/*.jpg ~/Pictures/random/mem
 :show
+:help
+:rename shell-color-scripts
+:Q
 :q
 
 # Search history (oldest to newest):
@@ -464,8 +516,7 @@ D
 # Local filter history (oldest to newest):
 
 # Registers:
-""/Users/ctarx/Desktop/1552388223124.png
-""/Users/ctarx/Desktop/1552388373281.jpg
+""/Users/ctarx/.local/share/vifm/Trash/000_.iStats
 
 # Directory stack (oldest to newest):
 
@@ -482,6 +533,120 @@ t/Users/ctarx/.local/share/vifm/Trash/000_zenburn.vifm
 	/Users/ctarx/.config/vifm/colors/zenburn.vifm
 t/Users/ctarx/.local/share/vifm/Trash/000_zenburn1.vifm
 	/Users/ctarx/.config/vifm/colors/zenburn1.vifm
+t/Users/ctarx/.local/share/vifm/Trash/000_README.md
+	/Users/ctarx/bin/README.md
+t/Users/ctarx/.local/share/vifm/Trash/000_alpha
+	/Users/ctarx/bin/alpha
+t/Users/ctarx/.local/share/vifm/Trash/000_arch
+	/Users/ctarx/bin/arch
+t/Users/ctarx/.local/share/vifm/Trash/000_bars
+	/Users/ctarx/bin/bars
+t/Users/ctarx/.local/share/vifm/Trash/000_blocks1
+	/Users/ctarx/bin/blocks1
+t/Users/ctarx/.local/share/vifm/Trash/000_blocks2
+	/Users/ctarx/bin/blocks2
+t/Users/ctarx/.local/share/vifm/Trash/000_bloks
+	/Users/ctarx/bin/bloks
+t/Users/ctarx/.local/share/vifm/Trash/000_colorbars
+	/Users/ctarx/bin/colorbars
+t/Users/ctarx/.local/share/vifm/Trash/000_colortest
+	/Users/ctarx/bin/colortest
+t/Users/ctarx/.local/share/vifm/Trash/000_colortest-slim
+	/Users/ctarx/bin/colortest-slim
+t/Users/ctarx/.local/share/vifm/Trash/000_colorview
+	/Users/ctarx/bin/colorview
+t/Users/ctarx/.local/share/vifm/Trash/000_colorwheel
+	/Users/ctarx/bin/colorwheel
+t/Users/ctarx/.local/share/vifm/Trash/000_crunch
+	/Users/ctarx/bin/crunch
+t/Users/ctarx/.local/share/vifm/Trash/000_crunchbang
+	/Users/ctarx/bin/crunchbang
+t/Users/ctarx/.local/share/vifm/Trash/000_crunchbang-mini
+	/Users/ctarx/bin/crunchbang-mini
+t/Users/ctarx/.local/share/vifm/Trash/000_darthvader
+	/Users/ctarx/bin/darthvader
+t/Users/ctarx/.local/share/vifm/Trash/000_dna
+	/Users/ctarx/bin/dna
+t/Users/ctarx/.local/share/vifm/Trash/000_elfman
+	/Users/ctarx/bin/elfman
+t/Users/ctarx/.local/share/vifm/Trash/000_faces
+	/Users/ctarx/bin/faces
+t/Users/ctarx/.local/share/vifm/Trash/000_fade
+	/Users/ctarx/bin/fade
+t/Users/ctarx/.local/share/vifm/Trash/000_ghosts
+	/Users/ctarx/bin/ghosts
+t/Users/ctarx/.local/share/vifm/Trash/000_guns
+	/Users/ctarx/bin/guns
+t/Users/ctarx/.local/share/vifm/Trash/000_hex
+	/Users/ctarx/bin/hex
+t/Users/ctarx/.local/share/vifm/Trash/000_illumina
+	/Users/ctarx/bin/illumina
+t/Users/ctarx/.local/share/vifm/Trash/000_jangofett
+	/Users/ctarx/bin/jangofett
+t/Users/ctarx/.local/share/vifm/Trash/000_monster
+	/Users/ctarx/bin/monster
+t/Users/ctarx/.local/share/vifm/Trash/000_mouseface
+	/Users/ctarx/bin/mouseface
+t/Users/ctarx/.local/share/vifm/Trash/000_mouseface2
+	/Users/ctarx/bin/mouseface2
+t/Users/ctarx/.local/share/vifm/Trash/000_pacman
+	/Users/ctarx/bin/pacman
+t/Users/ctarx/.local/share/vifm/Trash/000_panes
+	/Users/ctarx/bin/panes
+t/Users/ctarx/.local/share/vifm/Trash/000_pipes1
+	/Users/ctarx/bin/pipes1
+t/Users/ctarx/.local/share/vifm/Trash/000_pipes2
+	/Users/ctarx/bin/pipes2
+t/Users/ctarx/.local/share/vifm/Trash/000_pipes2-slim
+	/Users/ctarx/bin/pipes2-slim
+t/Users/ctarx/.local/share/vifm/Trash/000_print256
+	/Users/ctarx/bin/print256
+t/Users/ctarx/.local/share/vifm/Trash/000_pukeskull
+	/Users/ctarx/bin/pukeskull
+t/Users/ctarx/.local/share/vifm/Trash/000_rails
+	/Users/ctarx/bin/rails
+t/Users/ctarx/.local/share/vifm/Trash/000_rally-x
+	/Users/ctarx/bin/rally-x
+t/Users/ctarx/.local/share/vifm/Trash/000_rupees
+	/Users/ctarx/bin/rupees
+t/Users/ctarx/.local/share/vifm/Trash/000_six
+	/Users/ctarx/bin/six
+t/Users/ctarx/.local/share/vifm/Trash/000_space-invaders
+	/Users/ctarx/bin/space-invaders
+t/Users/ctarx/.local/share/vifm/Trash/000_spectrum
+	/Users/ctarx/bin/spectrum
+t/Users/ctarx/.local/share/vifm/Trash/000_square
+	/Users/ctarx/bin/square
+t/Users/ctarx/.local/share/vifm/Trash/000_starttf
+	/Users/ctarx/bin/starttf
+t/Users/ctarx/.local/share/vifm/Trash/000_tanks
+	/Users/ctarx/bin/tanks
+t/Users/ctarx/.local/share/vifm/Trash/000_terminal-colors.py
+	/Users/ctarx/bin/terminal-colors.py
+t/Users/ctarx/.local/share/vifm/Trash/000_thebat
+	/Users/ctarx/bin/thebat
+t/Users/ctarx/.local/share/vifm/Trash/000_thebat2
+	/Users/ctarx/bin/thebat2
+t/Users/ctarx/.local/share/vifm/Trash/000_tiefighter1
+	/Users/ctarx/bin/tiefighter1
+t/Users/ctarx/.local/share/vifm/Trash/000_tiefighter1-no-invo
+	/Users/ctarx/bin/tiefighter1-no-invo
+t/Users/ctarx/.local/share/vifm/Trash/000_tiefighter1row
+	/Users/ctarx/bin/tiefighter1row
+t/Users/ctarx/.local/share/vifm/Trash/000_tiefighter2
+	/Users/ctarx/bin/tiefighter2
+t/Users/ctarx/.local/share/vifm/Trash/000_unowns.py
+	/Users/ctarx/bin/unowns.py
+t/Users/ctarx/.local/share/vifm/Trash/000_zwaves
+	/Users/ctarx/bin/zwaves
+t/Users/ctarx/.local/share/vifm/Trash/000_00default.sh
+	/Users/ctarx/bin/00default.sh
+t/Users/ctarx/.local/share/vifm/Trash/000_LICENSE
+	/Users/ctarx/bin/LICENSE
+t/Users/ctarx/.local/share/vifm/Trash/000_.DS_Store
+	/Users/ctarx/bin/.DS_Store
+t/Users/ctarx/.local/share/vifm/Trash/000_.iStats
+	/Users/ctarx/.iStats
 
 # State:
 f
