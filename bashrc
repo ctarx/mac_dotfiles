@@ -6,12 +6,18 @@
 #  |_.__/ \__,_|___/_| |_|_|  \___|
 #
 
-HISTSIZE=HISTFILESIZE=     # Infinite history.
-SHELL_SESSION_HISTORY=0
+# History size matter
+export HISTSIZE=50000
+export HISTFILESIZE=50000
 
+# PATH
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/local/opt:$PATH"
 
-export PATH="/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/local/opt:$PATH"
+# Editor
 export EDITOR="nvim"
+
+# color
+export CLICOLOR=1
 
 ##### Bash prompt #####
 

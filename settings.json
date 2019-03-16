@@ -47,5 +47,6 @@
     "last 2 versions"
   ],
   "explorer.confirmDelete": false,
-  "vsicons.dontShowNewVersionMessage": true
+  "vsicons.dontShowNewVersionMessage": true,
+  "diffEditor.renderSideBySide": false
 }

@@ -16,7 +16,9 @@ alias ..='cd ../'
 
 alias ls='lsd'
 alias oo='open .' # open current directory in Finder'
-alias brew-update='brew update && brew upgrade && brew cleanup && brew doctor'
+alias brew-update="brew update && brew upgrade && brew cleanup && brew doctor"
+alias badge="tput bel" # System alert and badge on the terminal
+
 
 # Use neovim for vim if present.
 command -v nvim >/dev/null && alias vim="nvim" vimdiff="nvim -d"
