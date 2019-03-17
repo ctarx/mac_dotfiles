@@ -2,7 +2,7 @@
 > base configuration files
 
 ## Screenshots
-![screenshot](screen.png)
+![screenshot](sshot.png)
 
 ## Install
 ```shell
