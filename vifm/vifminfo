@@ -34,12 +34,6 @@ d/Users/ctarx/.slimzsh
 	..
 0
 d/Users/ctarx
-	.slimzsh
-4
-d/Users/ctarx/.slimzsh
-	..
-0
-d/Users/ctarx
 	.config
 4
 d/Users/ctarx/.config
@@ -328,8 +322,14 @@ d/Users/ctarx/Pictures
 	screenshots
 9
 d/Users/ctarx/Pictures/screenshots
-	Screenshot 2019-03-09 at 20.27.22.png
-2
+	..
+0
+d/Users/ctarx/Pictures
+	..
+0
+d/Users/ctarx
+	.zshrc
+55
 d
 
 # Right window history (oldest to newest):
@@ -516,7 +516,7 @@ D
 # Local filter history (oldest to newest):
 
 # Registers:
-""/Users/ctarx/.local/share/vifm/Trash/000_.iStats
+""/Users/ctarx/.local/share/vifm/Trash/000_{}
 
 # Directory stack (oldest to newest):
 
@@ -647,6 +647,22 @@ t/Users/ctarx/.local/share/vifm/Trash/000_.DS_Store
 	/Users/ctarx/bin/.DS_Store
 t/Users/ctarx/.local/share/vifm/Trash/000_.iStats
 	/Users/ctarx/.iStats
+t/Users/ctarx/.local/share/vifm/Trash/000_-exec
+	/Users/ctarx/-exec
+t/Users/ctarx/.local/share/vifm/Trash/000_-name
+	/Users/ctarx/-name
+t/Users/ctarx/.local/share/vifm/Trash/000_-type
+	/Users/ctarx/-type
+t/Users/ctarx/.local/share/vifm/Trash/000_;
+	/Users/ctarx/;
+t/Users/ctarx/.local/share/vifm/Trash/000_d
+	/Users/ctarx/d
+t/Users/ctarx/.local/share/vifm/Trash/000_dirname
+	/Users/ctarx/dirname
+t/Users/ctarx/.local/share/vifm/Trash/000_find
+	/Users/ctarx/find
+t/Users/ctarx/.local/share/vifm/Trash/000_{}
+	/Users/ctarx/{}
 
 # State:
 f

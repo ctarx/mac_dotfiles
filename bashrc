@@ -7,12 +7,9 @@
 #
 
 # HISTORY
-export HISTSIZE=100000          # big big history (default is 500)
-export HISTFILESIZE=$HISTSIZE   # big big history
+SHELL_SESSION_HISTORY=0
 # Don't record some commands
 export HISTIGNORE="&:[ ]*:exit:ls:bg:fg:history:clear"
-# Save multi-line commands as one command
-shopt -s cmdhist
 
 
 # PATH
@@ -73,11 +70,11 @@ function parse_git_dirty {
 	fi
 }
 
-PS1="${blue}●"                        # Separator
-PS1+="${yellow}\`parse_git_branch\`"  # GIT repository
-PS1+=" ${bold}${blue}\w"              # working directory
-PS1+="${reset}\n"                     # reset and new line
-PS1+="${bold}${purple}❯ ${reset}"     # prompt sign and reset
+PS1="\[$blue\]●"                        # Separator
+PS1+="\[$yellow\]\`parse_git_branch\`"  # GIT repository
+PS1+=" \[$bold\]\[$blue\]\w"              # working directory
+PS1+="\[$reset\]\n"                     # reset and new line
+PS1+="\[$bold\]\[$purple\]❯ \[$reset\]"     # prompt sign and reset
 
 export PS1;
 
