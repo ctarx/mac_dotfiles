@@ -1,6 +1,9 @@
 # macOS dotfiles
 > base configuration files
 
+## Screenshots
+![screenshot](screen.png)
+
 ## Install
 ```shell
 $ cd $HOME
