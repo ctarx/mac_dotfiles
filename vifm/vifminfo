@@ -30,36 +30,6 @@ l2
 r2
 
 # Left window history (oldest to newest):
-d/Users/ctarx/.mume
-	..
-0
-d/Users/ctarx
-	.npm
-17
-d/Users/ctarx/.npm
-	..
-0
-d/Users/ctarx
-	.tf
-20
-d/Users/ctarx/.tf
-	..
-0
-d/Users/ctarx
-	.tf-mapper
-21
-d/Users/ctarx/.tf-mapper
-	..
-0
-d/Users/ctarx
-	tf
-23
-d/Users/ctarx/tf
-	..
-0
-d/Users/ctarx
-	.slimzsh
-4
 d/Users/ctarx/.slimzsh
 	..
 0
@@ -329,7 +299,37 @@ d/Users/ctarx/.local/share/vifm
 1
 d/Users/ctarx/.local/share/vifm/Trash
 	000_starttf
-19
+10
+d/Users/ctarx/.local/share/vifm
+	Trash
+1
+d/Users/ctarx/.local/share
+	vifm
+3
+d/Users/ctarx/.local
+	share
+1
+d/Users/ctarx
+	Documents
+4
+d/Users/ctarx/Documents
+	Technology
+2
+d/Users/ctarx/Documents/Technology
+	..
+0
+d/Users/ctarx/Documents
+	..
+0
+d/Users/ctarx
+	Pictures
+32
+d/Users/ctarx/Pictures
+	screenshots
+9
+d/Users/ctarx/Pictures/screenshots
+	Screenshot 2019-03-09 at 20.27.22.png
+2
 d
 
 # Right window history (oldest to newest):
@@ -490,8 +490,8 @@ D/Users/ctarx
 	bin
 13
 D/Users/ctarx/bin
-	..
-0
+	OSX_beta.dmg
+1
 D
 
 # Command line history (oldest to newest):
