@@ -33,7 +33,7 @@ alias localip="ipconfig getifaddr en0"  # Local IP address
 
 # extract:  Extract most know archives with one command
 # ---------------------------------------------------------
-extract() {
+ext() {
   if [ -f $1 ] ; then
     case $1 in
       *.tar.bz2)   tar xjf $1 ;;
@@ -54,12 +54,13 @@ extract() {
     fi
 }
 
-cheatsheet() {
+chsheet() {
 # Cheatsheets https://github.com/chubin/cheat.sh
 curl -L "https://cheat.sh/$1"
 }
 
 # Shortcuts
+alias doc='cd ~/Documents'
 alias dl='cd ~/Downloads'
 alias dev='cd ~/Projects'
 alias dt='cd ~/.dotfiles'
