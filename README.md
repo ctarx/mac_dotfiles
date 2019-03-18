@@ -35,6 +35,8 @@ $ ./install.sh
 - neovim/vim
 - ranger / vifm
 - tmux
+- vscode settings.js
+- motd for arch and raspbian
 
 ### Additional
 - slimzsh
@@ -42,7 +44,7 @@ $ ./install.sh
 
 ### To do
 - raspbian dotfiles
-- Set zsh as login shell (<b>shell chsh -s $(which zsh)</b>)
+- Set zsh (or bash5) as login shell // (<b>chsh -s $(which zsh)</b>)
 
 #### Inspiration
 Install script and prompt inspired by github users:
