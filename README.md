@@ -7,7 +7,7 @@
 ## Install
 ```shell
 $ cd $HOME
-git clone https://github.com/ctarx/dotfiles.git
+git clone https://github.com/ctarx/dotfiles.git ~/.dotfiles
 $ cd ~/.dotfiles
 $ ./install.sh
 ```
