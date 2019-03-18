@@ -49,7 +49,7 @@ print "Setting up Homebrew"
 
 # Brew apps #####
 print "Installing apps with brew"
-BREW_PACKAGES=( git fasd lsd vifm pcre2 neovim node zsh zsh-completions bash )
+BREW_PACKAGES=( git fasd lsd vifm pcre2 neovim node zsh zsh-completions bash bash-completion@2 )
 
 for app in "${BREW_PACKAGES[@]}"; do
   msg_checking "Checking package $app"

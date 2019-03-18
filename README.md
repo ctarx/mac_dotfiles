@@ -16,6 +16,7 @@ $ ./install.sh
 - git
 - zsh / bash 5
 - zsh-completions
+- bash-completion@2
 - fasd
 - lsd
 - ranger / vifm
