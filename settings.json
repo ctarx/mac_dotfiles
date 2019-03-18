@@ -1,6 +1,6 @@
 {
-  "workbench.colorTheme": "Gruvbox Dark (Hard)",
   "workbench.iconTheme": "vscode-icons",
+
 
   // Editor
   "editor.fontFamily": "Operator Mono, Envy Code R for Powerline, Menlo, monospace",
@@ -48,5 +48,8 @@
   ],
   "explorer.confirmDelete": false,
   "vsicons.dontShowNewVersionMessage": true,
-  "diffEditor.renderSideBySide": false
+  "diffEditor.renderSideBySide": false,
+  "terminal.integrated.shell.osx": "/usr/local/bin/bash",
+  "workbench.startupEditor": "welcomePage",
+  "workbench.colorTheme": "Gruvbox Dark Medium"
 }

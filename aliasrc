@@ -64,6 +64,7 @@ alias doc='cd ~/Documents'
 alias dl='cd ~/Downloads'
 alias dev='cd ~/Projects'
 alias dt='cd ~/.dotfiles'
+alias edu='cd ~/Projects/web-education'
 
 # GIT
 alias gd='git diff'

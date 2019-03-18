@@ -38,6 +38,9 @@ call plug#end()
   set mouse=a
   set cursorline                  " Highlit cursor line
   set number relativenumber       " Show relative and actual line number
+  set wrap linebreak nolist
+  set colorcolumn=80
+  highlight ColorColumn ctermbg=Black
 
 " Softtaabs, 2 spaces
   set tabstop=2
