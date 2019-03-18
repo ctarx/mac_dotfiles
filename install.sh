@@ -3,6 +3,7 @@
 source functions.sh
 
 DOTFILES="$HOME/.dotfiles"
+VSCDIR=$HOME/Library/Application\ Support/Code/User
 
 printf "${green}
 -------------------------------------
@@ -81,7 +82,7 @@ print "Homebrew cask applications installed"
 
 print 'Checking dotfiles'
 # .bash_profile #####
-  if [ -f "$HOME/.bash_profile" ]; then
+  if [[ -f "$HOME/.bash_profile" ]]; then
     msg_update ".bash_profile"
     rm -rf ~/.bash_profile
   else
@@ -93,7 +94,7 @@ print 'Checking dotfiles'
 
 
 # .bashrc #####
-  if [ -f "$HOME/.bashrc" ]; then
+  if [[ -f "$HOME/.bashrc" ]]; then
     msg_update ".bashrc"
     rm -rf ~/.bashrc
   else
@@ -105,7 +106,7 @@ print 'Checking dotfiles'
 
 
 # aliasrc #####
-  if [ -f "$HOME/.config/aliasrc" ]; then
+  if [[ -f "$HOME/.config/aliasrc" ]]; then
     msg_update "aliasrc"
     rm -rf ~/.config/aliasrc
   else
@@ -117,7 +118,7 @@ print 'Checking dotfiles'
 
 
 # vim #####
-  if [ -d "$HOME/.config/nvim" ]; then
+  if [[ -d "$HOME/.config/nvim" ]]; then
     msg_update "nvim"
     rm -rf ~/.config/nvim
     rm -rf ~/.vim
@@ -133,18 +134,19 @@ print 'Checking dotfiles'
 
 
 # vscode #####
-  if [ -f "$HOME/Library/Application\ Support/Code/User/settings.json" ]; then
+  if [[ -f "$VSCDIR/settings.json" ]]; then
     msg_update "vscode settings"
-    rm -rf ~/Library/Application\ Support/Code/User/settings.json
+    rm -rf "$VSCDIR/settings.json"
   else
     msg_install "vscode setings"
   fi
-  ln -sf "$DOTFILES/settings.json" ~/Library/Application\ Support/Code/User/settings.json
+  ln -sf "$DOTFILES/settings.json" "$VSCDIR/settings.json"
   msg_checking "vscode settings"
 
 
+
 # .gitconfig #####
-  if [ -f "$HOME/.gitconfig" ]; then
+  if [[ -f "$HOME/.gitconfig" ]]; then
     msg_update ".gitconfig"
     rm -rf ~/.gitconfig
   else
@@ -156,7 +158,7 @@ print 'Checking dotfiles'
 
 
 # .gitignore #####
-  if [ -f "$HOME/.gitignore" ]; then
+  if [[ -f "$HOME/.gitignore" ]]; then
     msg_update ".gitignore"
     rm -rf ~/.gitignore
   else
@@ -170,7 +172,7 @@ print 'Checking dotfiles'
 
 
 # tmux #####
-  if [ -f "$HOME/.tmux.conf" ]; then
+  if [[ -f "$HOME/.tmux.conf" ]]; then
     msg_update ".tmux.conf"
     rm -rf ~/.tmux.conf
   else
@@ -182,7 +184,7 @@ print 'Checking dotfiles'
 
 
 # ranger #####
-  if [ -d "$HOME/.config/ranger" ]; then
+  if [[ -d "$HOME/.config/ranger" ]]; then
     msg_update "ranger"
     rm -rf ~/.config/ranger
   else
@@ -194,7 +196,7 @@ print 'Checking dotfiles'
 
 
 # vifm #####
-  if [ -d "$HOME/.config/vifm" ]; then
+  if [[ -d "$HOME/.config/vifm" ]]; then
     msg_update "vifm"
     rm -rf ~/.config/vifm
   else
@@ -206,7 +208,7 @@ print 'Checking dotfiles'
 
 
 # zsh #####
-  if [ -f "$HOME/.zshrc" ]; then
+  if [[ -f "$HOME/.zshrc" ]]; then
     msg_update ".zshrc"
     rm -rf ~/.zshrc
   else
@@ -227,7 +229,7 @@ print 'Checking dotfiles'
 
   rm -rf ~/.slimzsh/aliases.zsh.local
   touch ~/.slimzsh/aliases.zsh.local
-  echo '[ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"' >> ~/.slimzsh/aliases.zsh.local
+  echo '[[ -f "$HOME/.config/aliasrc" ]] && source "$HOME/.config/aliasrc"' >> ~/.slimzsh/aliases.zsh.local
 
 
 # ~/.hushlogin suppresses the 'last login' message

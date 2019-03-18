@@ -36,7 +36,7 @@ reset=$(tput sgr0)        # Text reset
 # get current branch in git repo
 function parse_git_branch() {
 	BRANCH=$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')
-	if [ ! "${BRANCH}" == "" ]
+	if [[ ! "${BRANCH}" == "" ]]
 	then
 		STAT=$(parse_git_dirty)
 		echo " (${BRANCH}${STAT})"
@@ -53,17 +53,19 @@ function parse_git_dirty {
 	ahead=$(echo -n "${status}" 2> /dev/null | grep "Your branch is ahead of" &> /dev/null; echo "$?")
 	parts=''
 
-	if [ "${ahead}" == "0" ]; then
+	if [[ "${ahead}" == "0" ]]; then
 		parts="▲${parts}"
 	fi
-	if [ "${up_to_date}" == "0" ]; then
+
+	if [[ "${up_to_date}" == "0" ]]; then
 		parts="✓${parts}"
 	fi
-	if [ "${dirty}" == "0" ]; then
+
+	if [[ "${dirty}" == "0" ]]; then
 		parts="✗${parts}"
 	fi
 
-	if [ ! "${parts}" == "" ]; then
+	if [[ ! "${parts}" == "" ]]; then
 		echo " ${parts}"
 	else
 		echo ""
@@ -107,4 +109,4 @@ if type brew &>/dev/null; then
 fi
 
 # Load aliases
-[ -f "$HOME/.config/aliasrc" ] && source "$HOME/.config/aliasrc"
+[[ -f "$HOME/.config/aliasrc" ]] && source "$HOME/.config/aliasrc"
