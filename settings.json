@@ -50,6 +50,6 @@
   "vsicons.dontShowNewVersionMessage": true,
   "diffEditor.renderSideBySide": false,
   "terminal.integrated.shell.osx": "/usr/local/bin/bash",
-  "workbench.startupEditor": "welcomePage",
+  "workbench.startupEditor": "newUntitledFile",
   "workbench.colorTheme": "Gruvbox Dark Medium"
 }
