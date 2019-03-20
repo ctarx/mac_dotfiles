@@ -5,10 +5,17 @@ source functions.sh
 DOTFILES="$HOME/.dotfiles"
 VSCDIR=$HOME/Library/Application\ Support/Code/User
 
-printf "${green}
--------------------------------------
-  ==> Setup for macOS <==
+printf "${purple}
+     _             ___ _ _
+    | |      _    / __|_) |
+  _ | | ___ | |_ | |__ _| | ____  ___
+ / || |/ _ \|  _)|  __) | |/ _  )/___)
+( (_| | |_| | |__| |  | | ( (/ /|___ |
+ \____|\___/ \___)_|  |_|_|\____|___/
 
+  ${green}==> Setup for macOS <==
+
+-------------------------------------
 ${yellow}● ${green}personal dotfiles
 ${yellow}● ${green}and base configuration files\n
 ${yellow}https://github.com/ctarx/dotfiles${reset}
