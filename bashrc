@@ -110,3 +110,4 @@ fi
 
 # Load aliases
 [[ -f "$HOME/.config/aliasrc" ]] && source "$HOME/.config/aliasrc"
+
