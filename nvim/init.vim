@@ -12,17 +12,20 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'morhetz/gruvbox'
   Plug 'ap/vim-css-color'
   Plug 'tpope/vim-surround'
+  Plug 'tpope/vim-commentary'
   Plug 'scrooloose/nerdtree'
   Plug 'mattn/emmet-vim'
   Plug 'sheerun/vim-polyglot'
   Plug 'jreybert/vimagit'
   Plug 'bling/vim-airline'
   Plug 'ryanoasis/vim-devicons'
+  Plug 'terryma/vim-multiple-cursors'
+  Plug 'Yggdroot/indentLine'
 
 call plug#end()
 
   syntax enable
-  let mapleader =","              " Use , instead of \ as leader
+  let mapleader = ","              " Use , instead of \ as leader
   filetype plugin indent on
   set background=dark             " Use dark background
   colorscheme gruvbox             " gruvbox colorscheme
@@ -80,6 +83,7 @@ call plug#end()
 " Enable Emmet just for html/css
   let g:user_emmet_install_global = 0
   autocmd FileType html,css EmmetInstall
+  let g:user_emmet_leader_key='<C-Z>'
 
 " Custom mappings
   map \ <leader>q
