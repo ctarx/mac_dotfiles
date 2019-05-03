@@ -1,5 +1,4 @@
 {
-  "workbench.iconTheme": "vscode-icons",
 
 
   // Editor
@@ -47,9 +46,11 @@
     "last 2 versions"
   ],
   "explorer.confirmDelete": false,
-  "vsicons.dontShowNewVersionMessage": true,
   "diffEditor.renderSideBySide": false,
   "terminal.integrated.shell.osx": "/usr/local/bin/bash",
   "workbench.startupEditor": "newUntitledFile",
-  "workbench.colorTheme": "Gruvbox Dark Medium"
+  "workbench.colorTheme": "Gruvbox Dark Medium",
+  "[javascript]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
+  }
 }
