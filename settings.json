@@ -1,6 +1,4 @@
 {
-
-
   // Editor
   "editor.fontFamily": "Operator Mono, Envy Code R for Powerline, Menlo, monospace",
   "editor.fontSize": 14,
@@ -23,24 +21,22 @@
   "explorer.confirmDragAndDrop": false,
   "html.format.unformatted": "wbr, a, span",
   "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": true,
-
   // Terminal
   "terminal.integrated.fontFamily": "RobotoMono Nerd Font",
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.cursorStyle": "underline",
-
   // Live Server
   "liveServer.settings.donotShowInfoMsg": true,
-
   //ESLint
   "eslint.enable": false,
-
   // Live Sass
-  "liveSassCompile.settings.formats": [{
-    "format": "expanded",
-    "extensionName": ".css",
-    "savePath": "~/../css/"
-  }],
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "~/../css/"
+    }
+  ],
   "liveSassCompile.settings.autoprefix": [
     "> 1%",
     "last 2 versions"
@@ -51,6 +47,12 @@
   "workbench.startupEditor": "newUntitledFile",
   "workbench.colorTheme": "Gruvbox Dark Medium",
   "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features",
+  },
+  "[html]": {
+    "editor.defaultFormatter": "HookyQR.beautify",
+  },
+  "[jsonc]": {
     "editor.defaultFormatter": "HookyQR.beautify"
   }
 }
