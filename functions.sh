@@ -1,5 +1,4 @@
-#!/usr/bin/env bash
-
+#!/bin/zsh
 
 # check OS #####
 is_os() {
