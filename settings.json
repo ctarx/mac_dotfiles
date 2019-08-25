@@ -43,7 +43,7 @@
   ],
   "explorer.confirmDelete": false,
   "diffEditor.renderSideBySide": false,
-  "terminal.integrated.shell.osx": "/usr/local/bin/bash",
+  "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
   "workbench.startupEditor": "newUntitledFile",
   "workbench.colorTheme": "Gruvbox Dark Medium",
   "[javascript]": {
