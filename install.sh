@@ -73,7 +73,7 @@ print "Homebrew packages installed"
 
 #  Brew Cask #####
 print "Installing apps with brew cask"
-cask=( google-chrome firefox visual-studio-code iina cakebrew )
+cask=( firefox visual-studio-code iina cakebrew )
 
 for app in "${cask[@]}"; do
   msg_checking "Checking application $app"
