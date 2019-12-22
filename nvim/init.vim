@@ -17,7 +17,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'mattn/emmet-vim'
   Plug 'sheerun/vim-polyglot'
   Plug 'jreybert/vimagit'
-  Plug 'bling/vim-airline'
+  Plug 'itchyny/lightline.vim'
   Plug 'ryanoasis/vim-devicons'
   Plug 'terryma/vim-multiple-cursors'
   Plug 'Yggdroot/indentLine'
@@ -30,6 +30,7 @@ call plug#end()
   set background=dark             " Use dark background
   colorscheme gruvbox             " gruvbox colorscheme
 ""set lines=50 columns=100        " vim initial window size
+  set noshowmode                  " because I use a lightline
   set clipboard=unnamed           " Clipboard integration
   set laststatus=2                " Always show status line
   set encoding=utf-8              " Set default encoding to UTF-8
