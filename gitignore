@@ -120,7 +120,9 @@ typings/
 
 # End of https://www.gitignore.io/api/node,macos
 
-#vifm
+# vifm
 vifminfo
 vifm-help.txt
 
+# neovim
+plugged/
