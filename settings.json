@@ -54,5 +54,8 @@
   },
   "[jsonc]": {
     "editor.defaultFormatter": "HookyQR.beautify"
-  }
+  },
+  "workbench.enableExperiments": false,
+  "workbench.settings.enableNaturalLanguageSearch": false,
+  "extensions.showRecommendationsOnlyOnDemand": true
 }
