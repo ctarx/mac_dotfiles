@@ -57,5 +57,6 @@
   },
   "workbench.enableExperiments": false,
   "workbench.settings.enableNaturalLanguageSearch": false,
-  "extensions.showRecommendationsOnlyOnDemand": true
+  "extensions.showRecommendationsOnlyOnDemand": true,
+  "breadcrumbs.enabled": false
 }
