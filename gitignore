@@ -126,3 +126,4 @@ vifm-help.txt
 
 # neovim
 plugged/
+autoload/
