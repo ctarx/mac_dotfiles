@@ -12,6 +12,7 @@
 
 alias less='less -R'
 alias grep='grep --color=auto'
+alias diff='diff --color=auto'
 alias ..='cd ../'
 
 alias ls='lsd'
@@ -60,12 +61,16 @@ curl -L "https://cheat.sh/$1"
 }
 
 # Shortcuts
-alias doc='cd ~/Documents'
-alias dl='cd ~/Downloads'
-alias dev='cd ~/Projects'
-alias dt='cd ~/.dotfiles'
-alias edu='cd ~/Projects/web-education'
-alias ic='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs'
+alias h='cd ~/ && ls -a'
+alias d='cd ~/Documents && ls -a'
+alias D='cd ~/Downloads && ls -a'
+alias m='cd ~/Music && ls -a'
+alias pp='cd ~/Pictures && ls -a'
+alias vv='cd ~/Movies && ls -a'
+alias dev='cd ~/Projects && ls -a'
+alias dt='cd ~/.dotfiles && ls -a'
+alias edu='cd ~/Projects/web-education && ls -a'
+alias ic='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs && ls -a'
 
 # GIT
 alias ga='git add'
