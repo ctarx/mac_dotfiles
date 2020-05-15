@@ -14,22 +14,38 @@ $ ./install.sh
 
 ### Homebrew apps
 - git
-- zsh / bash 5
+- zsh
 - zsh-completions
-- bash-completion@2
 - fasd
 - lsd
-- ranger / vifm
+- ranger
 - pcre2
 - neovim (I use a [vim-plug](https://github.com/junegunn/vim-plug) for plugins instead of git submodules)
 - node
+- htop
+- youtube-dl
 
 ### Homebrew cask
-- google-chrome
-- firefox
+- brave-browser
 - visual-studio-code
 - iina
 - cakebrew
+- alacritty
+- mudlet
+- bitwarden
+- telegram
+- discord
+- amethyst
+- syncthing
+- dropbox
+- steam
+- malwarebytes
+- teamviewer
+- electrum
+- tor-browser
+- balenaetcher
+- battle-net
+- virtualbox
 
 ### Configs
 - shells (zshrc, bashrc, etc.)
@@ -40,12 +56,10 @@ $ ./install.sh
 - motd for arch and raspbian
 
 ### Additional
-- slimzsh
 - .hushlogin
 
 ### To do
 - raspbian dotfiles
-- Set zsh (or bash5) as login shell // (<b>chsh -s $(which zsh)</b>)
 
 #### Inspiration
 Install script and prompt inspired by github users:
