@@ -57,7 +57,7 @@ print "Setting up Homebrew"
 
 # Brew apps #####
 print "Installing apps with brew"
-BREW_PACKAGES=( git fasd lsd vifm pcre2 neovim node zsh zsh-completions bash bash-completion@2 )
+BREW_PACKAGES=( git fasd lsd vifm pcre2 neovim node zsh zsh-completions htop youtube-dl )
 
 for app in "${BREW_PACKAGES[@]}"; do
   msg_checking "Checking package $app"
@@ -73,7 +73,7 @@ print "Homebrew packages installed"
 
 #  Brew Cask #####
 print "Installing apps with brew cask"
-cask=( firefox visual-studio-code iina cakebrew )
+cask=( brave-browser visual-studio-code iina cakebrew alacritty mudlet bitwarden telegram discord amethyst syncthing dropbox steam malwarebytes teamviewer electrum tor-browser balenaetcher battle-net virtualbox )
 
 for app in "${cask[@]}"; do
   msg_checking "Checking application $app"
@@ -88,43 +88,56 @@ print "Homebrew cask applications installed"
 
 
 print 'Checking dotfiles'
-# .bash_profile #####
-  if [[ -f "$HOME/.bash_profile" ]]; then
-    msg_update ".bash_profile"
-    rm -rf ~/.bash_profile
+
+
+# zsh #####
+  if [[ -f "$HOME/.zshrc" ]]; then
+    msg_update ".zshrc"
+    rm -rf ~/.zshrc
   else
-    msg_install ".bash_profile"
+    msg_install ".zshrc"
   fi
 
-  ln -s "$DOTFILES/bash_profile" ~/.bash_profile
-  msg_checking ".bash_profile"
+  ln -s "$DOTFILES/zsh" ~/.config/zsh
+  msg_checking ".zshrc"
 
-
-# .bashrc #####
-  if [[ -f "$HOME/.bashrc" ]]; then
-    msg_update ".bashrc"
-    rm -rf ~/.bashrc
+# zprofile #####
+  if [[ -f "$HOME/.zprofile" ]]; then
+    msg_update ".zprofile"
+    rm -rf ~/.zprofile
   else
-    msg_install ".bashrc"
+    msg_install ".zprofile"
   fi
 
-  ln -s "$DOTFILES/bashrc" ~/.bashrc
-  msg_checking ".bashrc"
-
+  ln -s "$DOTFILES/zprofile" ~/.zprofile
+  ln -s ~/.zprofile ~/.profile
+  msg_checking ".zprofile"
 
 # aliasrc #####
   if [[ -f "$HOME/.config/aliasrc" ]]; then
     msg_update "aliasrc"
     rm -rf ~/.config/aliasrc
   else
-    msg_install ".aliases"
+    msg_install "aliases"
   fi
 
   ln -s "$DOTFILES/aliasrc" ~/.config/aliasrc
   msg_checking "aliasrc"
 
 
-# vim #####
+# shortcutrc #####
+  if [[ -f "$HOME/.config/shortcutrc" ]]; then
+    msg_update "shortcutrc"
+    rm -rf ~/.config/shortcutrc
+  else
+    msg_install "shortcuts"
+  fi
+
+  ln -s "$DOTFILES/shortcutrc" ~/.config/shortcutrc
+  msg_checking "shortcutrc"
+
+
+# neovim #####
   if [[ -d "$HOME/.config/nvim" ]]; then
     msg_update "nvim"
     rm -rf ~/.config/nvim
@@ -135,8 +148,6 @@ print 'Checking dotfiles'
   fi
 
   ln -s "$DOTFILES/nvim" ~/.config/nvim
-  ln -sf ~/.dotfiles/nvim ~/.vim
-  ln -sf ~/.dotfiles/nvim/init.vim ~/.vimrc
   msg_checking "nvim"
 
 
@@ -214,33 +225,32 @@ print 'Checking dotfiles'
   msg_checking "vifm"
 
 
-# zsh #####
-  if [[ -f "$HOME/.zshrc" ]]; then
-    msg_update ".zshrc"
-    rm -rf ~/.zshrc
-  else
-    msg_install ".zshrc"
-  fi
-
-  ln -s "$DOTFILES/zshrc" ~/.zshrc
-  msg_checking ".zshrc"
-
-
-# slimzsh
-  if [[ -d $HOME/.slimzsh ]]; then
-    print 'Checking slimzh directory'
-  else
-    print 'Cloning slimzsh'
-    git clone --recursive https://github.com/changs/slimzsh.git ~/.slimzsh
-  fi
-
-  rm -rf ~/.slimzsh/aliases.zsh.local
-  touch ~/.slimzsh/aliases.zsh.local
-  echo '[[ -f "$HOME/.config/aliasrc" ]] && source "$HOME/.config/aliasrc"' >> ~/.slimzsh/aliases.zsh.local
-
-
 # ~/.hushlogin suppresses the 'last login' message
   touch ~/.hushlogin
+
+
+# .bash_profile #####
+  if [[ -f "$HOME/.bash_profile" ]]; then
+    msg_update ".bash_profile"
+    rm -rf ~/.bash_profile
+  else
+    msg_install ".bash_profile"
+  fi
+
+  ln -s "$DOTFILES/bash_profile" ~/.bash_profile
+  msg_checking ".bash_profile"
+
+
+# .bashrc #####
+  if [[ -f "$HOME/.bashrc" ]]; then
+    msg_update ".bashrc"
+    rm -rf ~/.bashrc
+  else
+    msg_install ".bashrc"
+  fi
+
+  ln -s "$DOTFILES/bashrc" ~/.bashrc
+  msg_checking ".bashrc"
 
 print "All done!"
 msg_info "Start using your machine."

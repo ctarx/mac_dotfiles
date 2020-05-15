@@ -1,0 +1,19 @@
+# vim: filetype=sh
+
+# Shortcuts
+alias \
+  h="cd ~/ && ls -a" \
+  d="cd ~/Documents && ls -a" \
+  D="cd ~/Downloads && ls -a" \
+  m="cd ~/Music && ls -a" \
+  pp="cd ~/Pictures && ls -a" \
+  vv="cd ~/Movies && ls -a" \
+  dev="cd ~/Projects && ls -a" \
+  edu="cd ~/Projects/web-education && ls -a" \
+  dt="cd ~/.dotfiles && ls -a" \
+  ark="cd ${XDG_CONFIG_HOME:-$HOME/.config}/mudlet/profiles/Arkadia && ls -a" \
+  cf="cd ${XDG_CONFIG_HOME:-$HOME/.config} && ls -a" \
+  cac="cd ${XDG_CONFIG_HOME:-$HOME/.cache} && ls -a" \
+  cfa="$EDITOR ${XDG_CONFIG_HOME:-$HOME/.config}/aliasrc" \
+  cfz="$EDITOR $ZDOTDIR/.zshrc" \
+  cfv="$EDITOR ${XDG_CONFIG_HOME:-$HOME/.config}/nvim/init.vim" \
