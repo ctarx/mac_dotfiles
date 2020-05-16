@@ -18,13 +18,9 @@ alias ls='lsd'
 alias oo='open .' # open current directory in Finder'
 alias brew-update="brew update && brew upgrade && brew cleanup && brew doctor"
 
-
 # Use neovim for vim if present.
 command -v nvim >/dev/null && alias vim="nvim" vimdiff="nvim -d"
 alias nvim-update="nvim +PlugUpgrade +PlugInstall +PlugUpdate +qa" # nvim update plugins
-
-# Use alacritty for terminal if present.
-command -v alacritty >/dev/null && alias terminal="alacritty"
 
 # Get macOS Software Updates, and update installed Homebrew, npm, and their installed packages
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm install npm -g; npm update -g'
