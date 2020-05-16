@@ -44,9 +44,10 @@ cd "$DOTFILES" || exit
 
 # Brew #####
 print "Setting up Homebrew"
+print "Homebrew requires Xcode command line: xcode-select --install"
   if test ! "$(command -v which brew)"; then
     msg_install "Installing Homebrew"
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
     msg_ok 'Homebrew'
   else
     msg_alert "Homebrew already installed"
@@ -73,7 +74,7 @@ print "Homebrew packages installed"
 
 #  Brew Cask #####
 print "Installing apps with brew cask"
-cask=( brave-browser visual-studio-code iina cakebrew alacritty mudlet bitwarden telegram discord amethyst syncthing dropbox steam malwarebytes teamviewer electrum tor-browser balenaetcher battle-net virtualbox )
+cask=( brave-browser visual-studio-code iina cakebrew iterm2 mudlet bitwarden telegram discord amethyst syncthing dropbox steam malwarebytes teamviewer electrum tor-browser balenaetcher battle-net virtualbox )
 
 for app in "${cask[@]}"; do
   msg_checking "Checking application $app"

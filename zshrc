@@ -8,6 +8,8 @@ PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magent
 setopt autocd	  	# Automatically cd into typed directory.
 stty stop undef		# Disable ctrl-s to freeze terminal.
 
+unsetopt prompt_cr prompt_sp  # Removing % sign in iterm2
+
 # History in cache directory:
 HISTSIZE=10000
 SAVEHIST=10000
