@@ -30,7 +30,7 @@ $ ./install.sh
 - visual-studio-code
 - iina
 - cakebrew
-- alacritty
+- iterm2
 - mudlet
 - bitwarden
 - telegram
