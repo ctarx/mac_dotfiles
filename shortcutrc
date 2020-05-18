@@ -17,3 +17,7 @@ alias \
   cfa="$EDITOR ${XDG_CONFIG_HOME:-$HOME/.config}/aliasrc" \
   cfz="$EDITOR $ZDOTDIR/.zshrc" \
   cfv="$EDITOR ${XDG_CONFIG_HOME:-$HOME/.config}/nvim/init.vim" \
+  arko="$EDITOR ${XDG_CONFIG_HOME:-$HOME/.config}/mudlet/profiles/arkadia/ozum.txt" \
+  arkd="$EDITOR ${XDG_CONFIG_HOME:-$HOME/.config}/mudlet/profiles/arkadia/dwinrim.txt" \
+  arkb="$EDITOR ${XDG_CONFIG_HOME:-$HOME/.config}/mudlet/profiles/arkadia/benantar.txt" \
+
