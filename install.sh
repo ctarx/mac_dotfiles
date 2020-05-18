@@ -58,7 +58,7 @@ print "Homebrew requires Xcode command line: xcode-select --install"
 
 # Brew apps #####
 print "Installing apps with brew"
-BREW_PACKAGES=( git fasd lsd ranger pcre2 neovim node zsh zsh-completions htop youtube-dl )
+BREW_PACKAGES=( git fasd lsd ranger pcre2 neovim node zsh zsh-completions gotop youtube-dl )
 
 for app in "${BREW_PACKAGES[@]}"; do
   msg_checking "Checking package $app"

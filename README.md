@@ -22,7 +22,7 @@ $ ./install.sh
 - pcre2
 - neovim (I use a [vim-plug](https://github.com/junegunn/vim-plug) for plugins instead of git submodules)
 - node
-- htop
+- gotop
 - youtube-dl
 
 ### Homebrew cask
