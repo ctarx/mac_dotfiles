@@ -74,7 +74,7 @@ print "Homebrew packages installed"
 
 #  Brew Cask #####
 print "Installing apps with brew cask"
-cask=( brave-browser visual-studio-code iina cakebrew iterm2 mudlet bitwarden telegram discord amethyst syncthing dropbox steam malwarebytes teamviewer electrum tor-browser balenaetcher battle-net virtualbox )
+cask=( brave-browser visual-studio-code iina cakebrew iterm2 mudlet bitwarden telegram discord amethyst syncthing dropbox steam twitch malwarebytes teamviewer electrum tor-browser balenaetcher battle-net virtualbox )
 
 for app in "${cask[@]}"; do
   msg_checking "Checking application $app"
