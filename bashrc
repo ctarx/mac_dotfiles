@@ -108,6 +108,7 @@ if type brew &>/dev/null; then
   fi
 fi
 
-# Load aliases
+# Load aliases & shortcuts
 [[ -f "$HOME/.config/aliasrc" ]] && source "$HOME/.config/aliasrc"
+[[ -f "$HOME/.config/shortcutrc" ]] && source "$HOME/.config/shortcutrc"
 
