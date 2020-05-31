@@ -37,7 +37,7 @@ zstyle ':vcs_info:*' enable git
 
 # vi mode
 bindkey -v
-export KEYTIMEOUT=1
+#export KEYTIMEOUT=1
 
 # Use vim keys in tab complete menu:
 bindkey -M menuselect 'h' vi-backward-char

@@ -73,6 +73,16 @@ call plug#end()
   map <C-k> <C-w>k
   map <C-l> <C-w>l
 
+" Disables arrow keys
+  nnoremap <up>    <nop>
+  nnoremap <down>  <nop>
+  nnoremap <left>  <nop>
+  nnoremap <right> <nop>
+  inoremap <up>    <nop>
+  inoremap <down>  <nop>
+  inoremap <left>  <nop>
+  inoremap <right> <nop>
+
 " Automatically deletes all trailing whitespace on save.
   autocmd BufWritePre * %s/\s\+$//e
 
