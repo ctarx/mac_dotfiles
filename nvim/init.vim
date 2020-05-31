@@ -86,6 +86,9 @@ call plug#end()
 " Automatically deletes all trailing whitespace on save.
   autocmd BufWritePre * %s/\s\+$//e
 
+" Replace all is aliased to S.
+	nnoremap S :%s//g<Left><Left>
+
 " Disables automatic commenting on newline:
 	autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
