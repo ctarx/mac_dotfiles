@@ -22,7 +22,7 @@ command -v nvim >/dev/null && alias vim="nvim" vimdiff="nvim -d"
 alias nvim-update="nvim +PlugUpgrade +PlugInstall +PlugUpdate +qa" # nvim update plugins
 
 # IP addresses
-alias ip='dig +short myip.opendns.com @resolver1.opendns.com' # Public IP address
+alias extip='dig +short myip.opendns.com @resolver1.opendns.com' # Public IP address
 alias localip="ipconfig getifaddr en0"  # Local IP address
 
 # extract:  Extract most know archives with one command

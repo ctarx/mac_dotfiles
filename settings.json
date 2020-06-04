@@ -45,7 +45,6 @@
   "diffEditor.renderSideBySide": false,
   "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
   "workbench.startupEditor": "newUntitledFile",
-  "workbench.colorTheme": "Gruvbox Dark Medium",
   "[javascript]": {
     "editor.defaultFormatter": "vscode.typescript-language-features",
   },
@@ -58,5 +57,9 @@
   "workbench.enableExperiments": false,
   "workbench.settings.enableNaturalLanguageSearch": false,
   "extensions.showRecommendationsOnlyOnDemand": true,
-  "breadcrumbs.enabled": false
+  "breadcrumbs.enabled": false,
+  "workbench.colorTheme": "Gruvbox Dark Medium",
+  "workbench.iconTheme": "simple-icons",
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
 }
