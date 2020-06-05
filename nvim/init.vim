@@ -31,7 +31,7 @@ call plug#end()
 
   syntax enable
   let mapleader = ","             " Use , as leader
-  filetype plugin indent on
+  filetype plugin indent on       " Alow sensing the filetype
   set background=dark             " Use dark background
   colorscheme gruvbox             " gruvbox colorscheme
   set noshowmode                  " because I use a lightline
