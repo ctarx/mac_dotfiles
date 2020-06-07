@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/local/bin/bash
 #   _               _
 #  | |__   __ _ ___| |__  _ __ ___
 #  | '_ \ / _` / __| '_ \| '__/ __|
@@ -13,10 +13,14 @@ export HISTIGNORE="&:[ ]*:exit:ls:bg:fg:history:clear"
 
 
 # PATH
-export PATH="$HOME/bin:$PATH";
+export PATH="$HOME/.local/bin:$PATH";
 
-# Editor
+# Default programs:
 export EDITOR="nvim"
+export TERMINAL="iterm2"
+export BROWSER="brave"
+export READER="preview"
+
 
 # color
 export CLICOLOR=1
@@ -53,19 +57,19 @@ function parse_git_dirty {
 	ahead=$(echo -n "${status}" 2> /dev/null | grep "Your branch is ahead of" &> /dev/null; echo "$?")
 	parts=''
 
-	if [[ "${ahead}" == "0" ]]; then
+	if [ "${ahead}" == "0" ]; then
 		parts="▲${parts}"
 	fi
 
-	if [[ "${up_to_date}" == "0" ]]; then
+	if [ "${up_to_date}" == "0" ]; then
 		parts="✓${parts}"
 	fi
 
-	if [[ "${dirty}" == "0" ]]; then
+	if [ "${dirty}" == "0" ]; then
 		parts="✗${parts}"
 	fi
 
-	if [[ ! "${parts}" == "" ]]; then
+	if [ ! "${parts}" == "" ]; then
 		echo " ${parts}"
 	else
 		echo ""
@@ -91,24 +95,22 @@ shopt -s nocaseglob
 # Allows to cd into a dir by just typing the dir name
 shopt -s autocd
 
-#[ -r "/etc/bashrc_$TERM_PROGRAM" ] && . "/etc/bashrc_$TERM_PROGRAM"
 
 #Bash completion
-[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+[ -r "/usr/local/etc/profile.d/bash_completion.sh" ] && . "/usr/local/etc/profile.d/bash_completion.sh"
 
 #brew completions in bash
 if type brew &>/dev/null; then
   for COMPLETION in $(brew --prefix)/etc/bash_completion.d/*
   do
-    [[ -f $COMPLETION ]] && source "$COMPLETION"
+    [ -f $COMPLETION ] && source "$COMPLETION"
   done
-  if [[ -f $(brew --prefix)/etc/profile.d/bash_completion.sh ]];
+  if [ -f $(brew --prefix)/etc/profile.d/bash_completion.sh ];
   then
     source "$(brew --prefix)/etc/profile.d/bash_completion.sh"
   fi
 fi
 
-# Load aliases & shortcuts
-[[ -f "$HOME/.config/aliasrc" ]] && source "$HOME/.config/aliasrc"
-[[ -f "$HOME/.config/shortcutrc" ]] && source "$HOME/.config/shortcutrc"
-
+# Load aliases
+[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shortcutrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shortcutrc"
+[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/aliasrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/aliasrc"

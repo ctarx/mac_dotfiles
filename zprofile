@@ -6,8 +6,8 @@
 # to clean up.
 
 # Adds `~/.local/bin` to $PATH
-#export PATH="$PATH:$(du "$HOME/.local/bin/" | cut -f2 | paste -sd ':')"
-export PATH="$PATH:$HOME/.local/bin:/usr/local/bin:/usr/bin:usr/local/sbin:/usr/local/opt"
+export PATH="$PATH:$(du "$HOME/.local/bin/" | gcut -f2 | gpaste -sd ':')"
+export PATH="$PATH:/usr/local/opt/coreutils/libexec/gnubin"
 
 # Default programs:
 export EDITOR="nvim"
@@ -20,4 +20,3 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
-
