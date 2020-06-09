@@ -9,10 +9,14 @@
 
 
 # UTILITY
+alias \
+	cp="cp -iv" \
+	mv="mv -iv" \
+	rm="rm -vI" \
+	mkd="mkdir -pv"
 
 alias less='less -R'
 alias ..='cd ../'
-
 alias ls='lsd'
 alias oo='open .' # open current directory in Finder'
 alias brew-update="brew update && brew upgrade && brew cleanup && brew doctor"
