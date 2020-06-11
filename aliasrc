@@ -10,10 +10,10 @@
 
 # UTILITY
 alias \
-	cp="cp -iv" \
-	mv="mv -iv" \
-	rm="rm -vI" \
-	mkd="mkdir -pv"
+	cp="gcp -iv" \
+	mv="gmv -iv" \
+	rm="grm -vI" \
+	mkd="gmkdir -pv"
 
 alias less='less -R'
 alias ..='cd ../'
