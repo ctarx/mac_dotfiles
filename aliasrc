@@ -20,6 +20,8 @@ alias ..='cd ../'
 alias ls='lsd'
 alias oo='open .' # open current directory in Finder'
 alias brew-update="brew update && brew upgrade && brew cleanup && brew doctor"
+alias tmux="tmux -f ${XDG_CONFIG_HOME:-$HOME/.config}/tmux/tmux.conf"
+alias grep="grep --color=auto"
 
 # Use neovim for vim if present.
 command -v nvim >/dev/null && alias vim="nvim" vimdiff="nvim -d"
