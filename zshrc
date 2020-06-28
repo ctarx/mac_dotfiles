@@ -13,7 +13,7 @@ autoload -U colors && colors	# Load colors
 
 #PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%m %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 
-PS1="%B%F{66}●%f%b \$vcs_info_msg_0_ %B%F{66}%~%f"$'\n'"%F{132}❯%f %b"
+PS1="%B%F{66}●%f%b \$vcs_info_msg_0_%B%F{66}%~%f"$'\n'"%F{132}❯%f %b"
 
 
 setopt autocd	  	# Automatically cd into typed directory.
@@ -44,7 +44,7 @@ precmd_vcs_info() { vcs_info }
 precmd_functions+=( precmd_vcs_info )
 setopt prompt_subst
 #RPROMPT=\$vcs_info_msg_0_
-zstyle ':vcs_info:git:*' formats '%F{172}(%b)%f %c%u'
+zstyle ':vcs_info:git:*' formats '%F{172}(%b)%f %c%u '
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:*' stagedstr     '%B%F{106}✓%f%b'
