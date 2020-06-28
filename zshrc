@@ -36,10 +36,10 @@ precmd_vcs_info() { vcs_info }
 precmd_functions+=( precmd_vcs_info )
 setopt prompt_subst
 #RPROMPT=\$vcs_info_msg_0_
-zstyle ':vcs_info:git:*' formats '%F{172}(%b %c%u)%f'
+zstyle ':vcs_info:git:*' formats '%F{172}(%b)%f %c%u'
 zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' enable git
-zstyle ':vcs_info:*' stagedstr     '%B%F{106}$%f%b'
+zstyle ':vcs_info:*' stagedstr     '%B%F{106}✓%f%b'
 zstyle ':vcs_info:*' unstagedstr   '%B%F{172}✗%f%b'
 
 # vi mode
