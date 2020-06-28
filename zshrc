@@ -1,11 +1,19 @@
 #.zshrc
+#           _
+#          | |
+#   _______| |__  _ __ ___
+#  |_  / __| '_ \| '__/ __|
+#   / /\__ \ | | | | | (__
+#  /___|___/_| |_|_|  \___|
+#
+#
 
 # Enable colors and change prompt:
 autoload -U colors && colors	# Load colors
 
 #PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%m %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 
-PS1="%B%F{66}●%f \$vcs_info_msg_0_ %F{66}%~%f"$'\n'"%F{132}❯%f %b"
+PS1="%B%F{66}●%f%b \$vcs_info_msg_0_ %B%F{66}%~%f"$'\n'"%F{132}❯%f %b"
 
 
 setopt autocd	  	# Automatically cd into typed directory.
