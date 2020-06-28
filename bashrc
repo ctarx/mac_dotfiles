@@ -78,9 +78,9 @@ function parse_git_dirty {
 
 PS1="\[$blue\]●"                        # Separator
 PS1+="\[$yellow\]\`parse_git_branch\`"  # GIT repository
-PS1+=" \[$bold\]\[$blue\]\w"              # working directory
+PS1+=" \[$bold\]\[$blue\]\w"            # working directory
 PS1+="\[$reset\]\n"                     # reset and new line
-PS1+="\[$bold\]\[$purple\]❯ \[$reset\]"     # prompt sign and reset
+PS1+="\[$bold\]\[$purple\]❯ \[$reset\]" # prompt sign and reset
 
 export PS1;
 
