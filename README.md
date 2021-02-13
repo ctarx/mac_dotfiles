@@ -1,4 +1,4 @@
-# macOS dotfiles
+# macOS dotfiles - discontinued
 > base configuration files
 
 ## Screenshots
